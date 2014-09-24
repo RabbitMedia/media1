@@ -18,8 +18,8 @@ handlers:
 - url: /assets/css
   static_dir: assets/css
 
-- url: /assets/images
-  static_dir: assets/images
+- url: /assets/image
+  static_dir: assets/image
 
 - url: /
   script: codeigniter/index.php
