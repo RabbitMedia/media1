@@ -140,7 +140,15 @@
 					<div id="sidebar">
 					
 						<!-- Logo -->
-							<h1 id="logo"><a href="/">STRIPED</a></h1>
+							<h1 id="logo"><a href="/">セックル速報</a></h1>
+					
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="#">新着動画</a></li>
+									<li><a href="#">カテゴリー</a></li>
+								</ul>
+							</nav>
 
 						<!-- Search -->
 							<section class="box search">
@@ -148,32 +156,24 @@
 									<input type="text" class="text" name="search" placeholder="キーワード検索" />
 								</form>
 							</section>
-					
+
 						<!-- Nav -->
-							<nav id="nav">
+							<nav id="nav2">
 								<ul>
-									<li class="current"><a href="#">新着動画</a></li>
-									<li><a href="#">カテゴリー</a></li>
-									<li><a href="#">About Me</a></li>
-									<li><a href="#">Contact Me</a></li>
+									<li><a href="#">サイトポリシー</a></li>
+									<li><a href="#">広告掲載について</a></li>
+									<li><a href="#">お問い合わせ</a></li>
 								</ul>
 							</nav>
-					
+
 						<!-- Text -->
 							<section class="box text-style1">
 								<div class="inner">
-									<p>
-										<strong>Striped:</strong> A free and fully responsive HTML5 site
-										template designed by <a href="http://n33.co/">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a>
-									</p>
+									<p>Copyright &copy; <?php echo date("Y"); ?></p>
+									<p>セックル速報</p>
+									<p>All Rights Reserved.</p>
 								</div>
 							</section>
-						
-						<!-- Copyright -->
-							<ul id="copyright">
-								<li>Copyright &copy; セックル速報</li>
-								<li>All Rights Reserved.</li>
-							</ul>
 
 					</div>
 

@@ -640,7 +640,14 @@
 					border-radius: 0.4em;
 					padding: 1.25em;
 					box-shadow: 0 0 0 1px rgba(255,255,255,0.05), inset 0 0 0.25em 0 rgba(0,0,0,0.25);
-				}	
+				}
+				
+				.box.text-style1 .inner p
+				{
+					font-size: 0.8em;
+					line-height: 0.8em;
+					text-align: center;
+				}
 
 /*********************************************************************************/
 /* Icons                                                                         */
@@ -734,6 +741,72 @@
 		}
 
 		#nav li:hover a
+		{
+			background-color: rgba(255,255,255,0.1);
+			color: #fff;
+		}
+
+/*********************************************************************************/
+/* Nav2                                                                           */
+/*********************************************************************************/
+
+	#nav2
+	{
+	}
+
+		#nav2 > ul > li > ul
+		{
+			display: none;
+		}
+
+		#nav2 ul
+		{
+			margin: 0;
+		}
+
+		#nav2 li
+		{
+			border-top: solid 1px rgba(0,0,0,0.25);
+			box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.075);
+			padding: 0.5em 0 0.5em 0;
+		}
+		
+		#nav2 li:first-child
+		{
+			border: 0;
+			box-shadow: none;
+			padding-top: 0;
+		}
+
+		#nav2 li:last-child
+		{
+			padding-bottom: 0;
+		}
+
+		#nav2 li a
+		{
+			display: block;
+			padding: 0.4em 1em 0.4em 1em;
+			text-decoration: none;
+			border-radius: 0.4em;
+			outline: 0;
+			-moz-transition: background-color .25s ease-in-out, color .25s ease-in-out;
+			-webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out;
+			-o-transition: background-color .25s ease-in-out, color .25s ease-in-out;
+			-ms-transition: background-color .25s ease-in-out, color .25s ease-in-out;
+			transition: background-color .25s ease-in-out, color .25s ease-in-out;
+		}
+
+		#nav2 li.current a
+		{
+			background-color: #272E39 !important;
+			background-color: rgba(0,0,0,0.15) !important;
+			box-shadow: 0 0 0 1px rgba(255,255,255,0.05), inset 0 0 0.25em 0 rgba(0,0,0,0.25);
+			font-weight: 700;
+			color: #fff;
+		}
+
+		#nav2 li:hover a
 		{
 			background-color: rgba(255,255,255,0.1);
 			color: #fff;
@@ -956,35 +1029,6 @@
 				margin: 0.6em 0;
 				line-height: 1.5em;
 			}
-
-/*********************************************************************************/
-/* Copyright                                                                     */
-/*********************************************************************************/
-
-	#copyright
-	{
-	}
-
-		#copyright p
-		{
-			opacity: 0.75;
-		}
-
-		#copyright a
-		{
-			color: inherit !important;
-		}
-
-		#copyright:before
-		{
-			content: '';
-			border-top: solid 1px;
-			border-bottom: solid 1px;
-			border-color: #171E29;
-			border-color: rgba(0,0,0,0.25);
-			box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.075), 0px 1px 0px 0px rgba(255,255,255,0.075);
-			display: block;
-		}
 		
 /*********************************************************************************/
 /* Mobile UI                                                                     */
