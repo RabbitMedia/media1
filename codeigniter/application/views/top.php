@@ -16,6 +16,14 @@
 			<link rel="stylesheet" href="/assets/css/style-desktop.css" />
 			<link rel="stylesheet" href="/assets/css/style-wide.css" />
 		</noscript>
+		<script type="text/javascript">
+			$(function(){
+				$("#category").css("display", "none");
+				$("#categoryPush").click(function(){
+					$("#category").slideToggle();
+				});
+			});
+		</script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie/v8.css" /><![endif]-->
 	</head>
 	<?php
@@ -31,13 +39,57 @@
 					<div id="content">
 						<div class="inner">
 
+							<div id="category">
+								<ul>
+									<li><a href="#">お豆腐屋さん</a></li>
+									<li><a href="#">高校生</a></li>
+									<li><a href="#">ゲロリ</a></li>
+									<li><a href="#">JK</a></li>
+									<li><a href="#">ファンタジスタ</a></li>
+									<li><a href="#">高校生</a></li>
+									<li><a href="#">ゲロリ</a></li>
+									<li><a href="#">JK</a></li>
+									<li><a href="#">散髪屋</a></li>
+									<li><a href="#">高校生</a></li>
+									<li><a href="#">ゲロリ</a></li>
+									<li><a href="#">JK</a></li>
+									<li><a href="#">お惣菜屋さん</a></li>
+									<li><a href="#">高校生</a></li>
+									<li><a href="#">ゲロリ</a></li>
+									<li><a href="#">JK</a></li>
+									<li><a href="#">ヴィジュアルサロン</a></li>
+									<li><a href="#">高校生</a></li>
+									<li><a href="#">ゲロリ</a></li>
+									<li><a href="#">JK</a></li>
+									<li><a href="#">骨董品</a></li>
+									<li><a href="#">高校生</a></li>
+									<li><a href="#">ゲロリ</a></li>
+									<li><a href="#">JK</a></li>
+									<li><a href="#">B系</a></li>
+									<li><a href="#">高校生</a></li>
+									<li><a href="#">ゲロリ</a></li>
+									<li><a href="#">JK</a></li>
+								</ul>
+							</div>
+
+							<h1>9999件の無料セックス動画があります。</h1>
+
 							<!-- Post -->
 								<ul id="tiles">
 									<li>
 										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<p><span><a href="#"><label> </label>牛乳瓶</a> <a href="#">キョロ</a> <a href="#">マロニー</a></span></p>
+											<label> </label><span><a href="#">牛乳瓶</a> <a href="#">キョロ</a> <a href="#">マロニー</a></span>
+											<p>2014年12月31日</p>
+										</div>
+									</li>
+									<li>
+										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<div class="post-basic-info">
+											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
+											<span><a href="#"><label> </label>素人</a></span><br />
+											<p>2014年12月31日</p>
 										</div>
 									</li>
 									<li>
@@ -45,6 +97,7 @@
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
+											<p>2014年12月31日</p>
 										</div>
 									</li>
 									<li>
@@ -52,6 +105,7 @@
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
+											<p>2014年12月31日</p>
 										</div>
 									</li>
 									<li>
@@ -59,6 +113,7 @@
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
+											<p>2014年12月31日</p>
 										</div>
 									</li>
 									<li>
@@ -66,6 +121,7 @@
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
+											<p>2014年12月31日</p>
 										</div>
 									</li>
 									<li>
@@ -73,6 +129,7 @@
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
+											<p>2014年12月31日</p>
 										</div>
 									</li>
 									<li>
@@ -80,6 +137,7 @@
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
+											<p>2014年12月31日</p>
 										</div>
 									</li>
 									<li>
@@ -87,6 +145,7 @@
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
+											<p>2014年12月31日</p>
 										</div>
 									</li>
 									<li>
@@ -94,6 +153,7 @@
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
+											<p>2014年12月31日</p>
 										</div>
 									</li>
 									<li>
@@ -101,6 +161,7 @@
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
+											<p>2014年12月31日</p>
 										</div>
 									</li>
 									<li>
@@ -108,20 +169,14 @@
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span>
+											<p>2014年12月31日</p>
 										</div>
 									</li>
 								</ul>
 
 							<!-- Pagination -->
 								<div class="pagination">
-									<!--<a href="#" class="button previous">Previous Page</a>-->
+									<a href="#" class="button previous">前のページ</a>
 									<div class="pages">
 										<a href="#" class="active">1</a>
 										<a href="#">2</a>
@@ -140,13 +195,13 @@
 					<div id="sidebar">
 					
 						<!-- Logo -->
-							<h1 id="logo"><a href="/">セックル速報</a></h1>
+							<div id="logo"><a href="/">セックル速報</a></div>
 					
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li class="current"><a href="#">新着動画</a></li>
-									<li><a href="#">カテゴリー</a></li>
+									<li class="current"><a href="/">新着動画</a></li>
+									<li id="categoryPush"><a href="#categories">カテゴリー</a></li>
 								</ul>
 							</nav>
 

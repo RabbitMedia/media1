@@ -21,7 +21,7 @@
 				sidePanel: {
 					animation: 'revealX',
 					breakpoints: ['narrower', 'mobile'],
-					clickToClose: true,
+					clickToClose: false,
 					height: '100%',
 					hidden: true,
 					html: '<div data-action="moveElement" data-args="sidebar"></div>',
