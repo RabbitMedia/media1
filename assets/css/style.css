@@ -829,6 +829,133 @@
 			position: relative;
 			z-index: 1;
 		}
+/*********************************************************************************/
+/* Grid                                                                          */
+/*********************************************************************************/
+
+	#tiles
+	{
+		list-style-type: none;
+		position: relative; /** Needed to ensure items are laid out relative to this container **/
+		margin: 0;
+		padding: 0;
+	}
+
+		#tiles li:hover img
+		{
+			opacity: 0.8;
+		}
+
+		#tiles li
+		{
+		 	width: 160px;
+			background-color: #ffffff;
+			border: 1px solid #dedede;
+			border-radius: 2px;
+			-moz-border-radius: 2px;
+			-webkit-border-radius: 2px;
+			display: inline-block;
+			/*cursor: pointer;*/
+			border-radius: 0.2em;
+			margin: 0 1em 1em 0;
+		}
+
+		#tiles li img
+		{
+			border-top-left-radius:0.2em;
+			border-top-right-radius:0.2em;
+		}
+
+		#tiles li.inactive
+		{
+		  visibility: hidden;
+		  opacity: 0;
+		}
+
+		#tiles li img
+		{
+		 	display: block;
+			width: 100%;
+		}
+
+		/*--media Quries for 640px-monitors-*/
+		@media only screen and (max-width:640px) and (min-width:480px) {
+			#main{
+				margin-top: 7em;
+			}
+		}
+		/*--media Quries for 480px-monitors-*/
+		@media only screen and (max-width:480px) and (min-width:320px) {
+			#main {
+				margin-top: 9.5em;
+			}
+		}
+		/*--media Quries for 320px-monitors-*/
+		@media only screen and (max-width:320px) and (min-width:240px) {
+			#main {
+				margin-top: 9em;
+			}
+			#tiles li {
+				width: 266px;
+			}
+		}
+
+		.post-basic-info
+		{
+			padding: 3% 7% 3% 7%;
+		}
+
+			.post-basic-info h3 a
+			{
+				font-size: 0.8em;
+				color: #717171;
+				/*margin: 0.6em 0;*/
+				line-height: 1.4em;
+				display: block;
+				text-decoration: none;
+				transition:0.5s all;
+				-webkit-transition:0.5s all;
+				-moz-transition:0.5s all;
+				-o-transition:0.5s all;
+			}
+
+			.post-basic-info h3 a:hover
+			{
+				color:#B9CB41;
+			}
+
+			.post-basic-info span a
+			{
+				color: #ACAAAA;
+				font-size: 0.8em;
+				text-decoration: none;
+			}
+
+			.post-basic-info span a label
+			{
+				height:12px;
+				width:12px;
+				display:inline-block;
+				background:url(/assets/image/map-pin.png) no-repeat 0px 0px;
+				margin-right: 0.4em;
+				transition:0.5s all;
+				-webkit-transition:0.5s all;
+				-moz-transition:0.5s all;
+				-o-transition:0.5s all;
+			}
+
+			.post-basic-info span a:hover
+			{
+				color:#B9CB41;
+			}
+
+			.post-basic-info p
+			{
+				font-size: 0.875em;
+				color: #B7B5B5;
+				margin: 0.6em 0;
+				line-height: 1.5em;
+			}
 
 /*********************************************************************************/
 /* Copyright                                                                     */
