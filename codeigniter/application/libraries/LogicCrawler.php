@@ -5,7 +5,10 @@ class LogicCrawler {
 	const CRAWL_PAGE_NUM			=	2;												// クロールするページ数
 
 	const BASE_URL_TENGOKU			=	'http://www.tengokudouga.com/';
-	const CONTENTS_URL_TENGOKU		=	'http://www.tengokudouga.com/?p=%page_num%';
+	const PAGE_URL_TENGOKU			=	'http://www.tengokudouga.com/?p=%page_num%';
+
+	const BASE_URL_NUKIST			=	'http://www.nukistream.com/';
+	const PAGE_URL_NUKIST			=	'http://www.nukistream.com/?p=%page_num%';
 
 	/**
 	 * 指定サイトから動画情報を取得する
@@ -21,7 +24,7 @@ class LogicCrawler {
 		for ($i=1; $i <= self::CRAWL_PAGE_NUM; $i++)
 		{ 
 			// ページを取得
-			$url = str_replace('%page_num%', $i, self::CONTENTS_URL_TENGOKU);
+			$url = str_replace('%page_num%', $i, self::PAGE_URL_TENGOKU);
 			$html = file_get_contents($url);
 			// ページの取得に失敗したらfalseを返す
 			if (!$html)
@@ -87,6 +90,85 @@ class LogicCrawler {
 	}
 
 	/**
+	 * 指定サイトから動画情報を取得する
+	 */
+	public function get_from_nukist()
+	{
+		// 動画配列
+		$videos = array();
+		// カウント
+		$count = 0;
+
+		// CRAWL_PAGE_NUMに定義されてるページ数分クロールする
+		for ($i=1; $i <= self::CRAWL_PAGE_NUM; $i++)
+		{ 
+			// ページを取得
+			$url = str_replace('%page_num%', $i, self::PAGE_URL_NUKIST);
+			$html = file_get_contents($url);
+			// ページの取得に失敗したらfalseを返す
+			if (!$html)
+			{
+				return false;
+			}
+
+			// 文字コードをSJISに変換
+			// $html = mb_convert_encoding($html, 'SJIS', 'auto');
+			// 改行コードを削除
+			$html = preg_replace('/(\n|\r)/', '', $html);
+
+			// 動画情報を正規表現で抽出
+			if (preg_match_all('/(?<=cntInfo).*?(?=\<\/a>\<\/h2)/', $html, $elements))
+			{
+				foreach ($elements[0] as $element)
+				{
+					// xvideosコンテンツ以外は除外
+					if (!strpos($element, 'xv.png'))
+					{
+						continue;
+					}
+					else
+					{
+						// タイトルとコンテンツページURLを抽出
+						if (preg_match('/(?<=<h2>).*/', $element, $matches))
+						{
+							// タイトルを抽出
+							if (preg_match('/(?<=>).*/', $matches[0], $title))
+							{
+								$videos[$count]['title'] = $title[0];
+							}
+							// コンテンツページURLを抽出
+							if (preg_match('/(?<=<a href=").*?(?=">.*)/', $matches[0], $contents_page_url))
+							{
+								// コンテンツページURLから動画IDを抽出
+								$videos[$count]['video_id'] = $this->_get_xvideos_id(self::BASE_URL_NUKIST.$contents_page_url[0]);
+							}
+						}
+						else
+						{
+							return false;
+						}
+
+						// 再生時間を抽出
+						if (preg_match('/(?<=labelUpdate">).*?(?=<\/span)/', $element, $matches))
+						{
+							$videos[$count]['duration'] = $matches[0];
+						}
+
+						// カウントをインクリメント
+						$count++;
+					}
+				}
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		return $videos;
+	}
+
+	/**
 	 * 指定サイトのコンテンツページからxvideosの動画IDを取得する
 	 */
 	private function _get_xvideos_id($url)
@@ -106,9 +188,12 @@ class LogicCrawler {
 		$html = preg_replace('/(\n|\r)/', '', $html);
 
 		// 動画IDを抽出する
-		if (preg_match('/(?<=embedframe\/).*?(?=")/', $html, $matches))
+		if (preg_match_all('/(?<=embedframe\/).*?(?=")/', $html, $matches))
 		{
-			$video_id = $matches[0];
+			foreach ($matches[0] as $match)
+			{
+				$video_id[] = $match;
+			}
 		}
 
 		return $video_id;
