@@ -73,6 +73,15 @@ class LogicCrawler {
 						if (preg_match('/(?<=labelUpdate">).*?(?=<\/span)/', $element, $matches))
 						{
 							$videos[$count]['duration'] = $matches[0];
+
+							// 時間を"h"で表現している場合は分に計算し直す
+							if (strpos($matches[0], 'h'))
+							{
+								if (preg_match('/.*(?=h)/', $matches[0], $hours) && preg_match('/(?<=h ).*/', $matches[0], $minutes) && preg_match('/(?<=:).*/', $matches[0], $seconds))
+								{
+									$videos[$count]['duration'] = (((int)$hours[0] * 60) + (int)$minutes[0]).':'.$seconds[0];
+								}
+							}
 						}
 
 						// カウントをインクリメント
