@@ -61,12 +61,17 @@ class LogicCrawler {
 							if (preg_match('/(?<=<a href=").*?(?=">.*)/', $matches[0], $contents_page_url))
 							{
 								// コンテンツページURLから動画IDを抽出
-								$videos[$count]['video_id'] = $this->_get_xvideos_id(self::BASE_URL_TENGOKU.$contents_page_url[0]);
+								$videos[$count]['video_url_id'] = $this->_get_xvideos_id(self::BASE_URL_TENGOKU.$contents_page_url[0]);
+								// nullじゃなければタイプをセットする
+								if (!is_null($videos[$count]['video_url_id']))
+								{
+									$videos[$count]['type'] = 1; // モデル名::TYPE_XVIDEOSみたいに書く
+								}
 							}
 						}
 						else
 						{
-							return false;
+							continue;
 						}
 
 						// 再生時間を抽出
@@ -152,12 +157,17 @@ class LogicCrawler {
 							if (preg_match('/(?<=<a href=").*?(?=">.*)/', $matches[0], $contents_page_url))
 							{
 								// コンテンツページURLから動画IDを抽出
-								$videos[$count]['video_id'] = $this->_get_xvideos_id(self::BASE_URL_NUKIST.$contents_page_url[0]);
+								$videos[$count]['video_url_id'] = $this->_get_xvideos_id(self::BASE_URL_NUKIST.$contents_page_url[0]);
+								// nullじゃなければタイプをセットする
+								if (!is_null($videos[$count]['video_url_id']))
+								{
+									$videos[$count]['type'] = 1; // モデル名::TYPE_XVIDEOSみたいに書く
+								}
 							}
 						}
 						else
 						{
-							return false;
+							continue;
 						}
 
 						// 再生時間を抽出
