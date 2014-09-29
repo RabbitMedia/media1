@@ -95,7 +95,10 @@ class LogicCrawler {
 			}
 		}
 
-		return $videos;
+		// 掲載古い順に入れ替える
+		$reversed = array_reverse($videos);
+
+		return $reversed;
 	}
 
 	/**
@@ -174,7 +177,10 @@ class LogicCrawler {
 			}
 		}
 
-		return $videos;
+		// 掲載古い順に入れ替える
+		$reversed = array_reverse($videos);
+
+		return $reversed;
 	}
 
 	/**
