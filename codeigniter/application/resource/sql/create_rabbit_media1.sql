@@ -74,3 +74,13 @@ CREATE TABLE `crawler_video_title` (
   PRIMARY KEY (`id`),
   KEY `crawler_video_title_idx_01` (`crawler_master_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT 'クローラー動画タイトル情報';
+
+CREATE TABLE `admin` (
+  `id`          TINYINT(1) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `username`    VARCHAR(32)         NOT NULL                COMMENT 'ユーザー名',
+  `password`    VARCHAR(32)         NOT NULL                COMMENT 'パスワード',
+  `create_time` DATETIME            NOT NULL                COMMENT '作成日時',
+  `update_time` DATETIME            NOT NULL                COMMENT '更新日時',
+  `delete_time` DATETIME            DEFAULT NULL            COMMENT '削除日時',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '管理者情報';
