@@ -2,7 +2,7 @@
 
 class LogicCrawler {
 
-	const CRAWL_PAGE_NUM			=	2;												// クロールするページ数
+	const CRAWL_PAGE_NUM			=	2;				// クロールするページ数
 
 	const BASE_URL_TENGOKU			=	'http://www.tengokudouga.com/';
 	const PAGE_URL_TENGOKU			=	'http://www.tengokudouga.com/?p=%page_num%';
@@ -77,16 +77,39 @@ class LogicCrawler {
 						// 再生時間を抽出
 						if (preg_match('/(?<=labelUpdate">).*?(?=<\/span)/', $element, $matches))
 						{
-							$videos[$count]['duration'] = $matches[0];
+							$videos[$count]['duration'] = null;
 
-							// 時間を"h"で表現している場合は分に計算し直す
+							// 時間を"h"で表現している場合
 							if (strpos($matches[0], 'h'))
 							{
-								if (preg_match('/.*(?=h)/', $matches[0], $hours) && preg_match('/(?<=h ).*/', $matches[0], $minutes) && preg_match('/(?<=:).*/', $matches[0], $seconds))
+								if (preg_match('/.*(?=h)/', $matches[0], $hours) && preg_match('/(?<=h ).*?(?=:)/', $matches[0], $minutes) && preg_match('/(?<=:).*/', $matches[0], $seconds))
 								{
-									$videos[$count]['duration'] = (((int)$hours[0] * 60) + (int)$minutes[0]).':'.$seconds[0];
+									// 時間は全て"分"に直していたが、mysqlのTIME型に入れるため変更
+									// $videos[$count]['duration'] = (((int)$hours[0] * 60) + (int)$minutes[0]).':'.$seconds[0];
+									$videos[$count]['duration'] = $hours[0].':'.$minutes[0].':'.$seconds[0];
 								}
 							}
+							else
+							{
+								if (preg_match('/.*?(?=:)/', $matches[0], $minutes) && preg_match('/(?<=:).*/', $matches[0], $seconds))
+								{
+									// "分"表示で60分を超えるものは時間として変換する
+									if ($minutes[0] >= 60)
+									{
+										$videos[$count]['duration'] = floor((int)$minutes[0] / 60).':'.((int)$minutes[0] % 60).':'.$seconds[0];
+									}
+									else
+									{
+										$videos[$count]['duration'] = '00:'.$minutes[0].':'.$seconds[0];
+									}
+								}
+							}
+						}
+
+						// 情報が入っていればメディアをセットする
+						if (isset($videos[$count]))
+						{
+							$videos[$count]['media'] = 1; // モデル名::MEDIA_TENGOKUみたいに書く
 						}
 
 						// カウントをインクリメント
@@ -173,7 +196,26 @@ class LogicCrawler {
 						// 再生時間を抽出
 						if (preg_match('/(?<=labelUpdate">).*?(?=<\/span)/', $element, $matches))
 						{
-							$videos[$count]['duration'] = $matches[0];
+							$videos[$count]['duration'] = null;
+
+							if (preg_match('/.*?(?=:)/', $matches[0], $minutes) && preg_match('/(?<=:).*/', $matches[0], $seconds))
+							{
+								// "分"表示で60分を超えるものは時間に変換する
+								if ($minutes[0] >= 60)
+								{
+									$videos[$count]['duration'] = floor((int)$minutes[0] / 60).':'.((int)$minutes[0] % 60).':'.$seconds[0];
+								}
+								else
+								{
+									$videos[$count]['duration'] = '00:'.$minutes[0].':'.$seconds[0];
+								}
+							}
+						}
+
+						// 情報が入っていればメディアをセットする
+						if (isset($videos[$count]))
+						{
+							$videos[$count]['media'] = 2; // モデル名::MEDIA_NUKISTみたいに書く
 						}
 
 						// カウントをインクリメント
