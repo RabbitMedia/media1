@@ -1,7 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Top extends CI_Controller {
-
+/**
+ * トップページコントローラ
+ */
+class Top extends CI_Controller
+{
 	/**
 	 * Index Page for this controller.
 	 *
@@ -19,7 +22,21 @@ class Top extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('top');
+		$data = array();
+		// $this->load->Library('LogicCrawler');
+		// $data['videos'] = $this->logiccrawler->get_from_tengoku();
+
+		$category_csv = AppCsvLoader::load('category.csv');
+		foreach ($category_csv as $key => $value)
+		{
+			$category['name'] = $value['name'];
+			$category['id'] = $value['id'];
+			$categories[] = $category;
+		}
+
+		$data['categories'] = $categories;
+
+		$this->load->view('top', $data);
 	}
 }
 

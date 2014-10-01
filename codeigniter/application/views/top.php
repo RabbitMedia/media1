@@ -5,16 +5,16 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="/assets/css/ie/html5shiv.js"></script><![endif]-->
-		<script src="/assets/js/jquery.min.js"></script>
-		<script src="/assets/js/skel.min.js"></script>
-		<script src="/assets/js/skel-layers.min.js"></script>
-		<script src="/assets/js/init.js"></script>
+		<!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/skel.min.js"></script>
+		<script src="/js/skel-layers.min.js"></script>
+		<script src="/js/init.js"></script>
 		<noscript>
-			<link rel="stylesheet" href="/assets/css/skel.css" />
-			<link rel="stylesheet" href="/assets/css/style.css" />
-			<link rel="stylesheet" href="/assets/css/style-desktop.css" />
-			<link rel="stylesheet" href="/assets/css/style-wide.css" />
+			<link rel="stylesheet" href="/css/skel.css" />
+			<link rel="stylesheet" href="/css/style.css" />
+			<link rel="stylesheet" href="/css/style-desktop.css" />
+			<link rel="stylesheet" href="/css/style-wide.css" />
 		</noscript>
 		<script type="text/javascript">
 			$(function(){
@@ -24,7 +24,7 @@
 				});
 			});
 		</script>
-		<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
 	</head>
 	<?php
 		// Note: Set the body element's class to "left-sidebar" to position the sidebar on the left.
@@ -41,43 +41,20 @@
 
 							<div id="category">
 								<ul>
-									<li><a href="#">お豆腐屋さん</a></li>
-									<li><a href="#">高校生</a></li>
-									<li><a href="#">ゲロリ</a></li>
-									<li><a href="#">JK</a></li>
-									<li><a href="#">ファンタジスタ</a></li>
-									<li><a href="#">高校生</a></li>
-									<li><a href="#">ゲロリ</a></li>
-									<li><a href="#">JK</a></li>
-									<li><a href="#">散髪屋</a></li>
-									<li><a href="#">高校生</a></li>
-									<li><a href="#">ゲロリ</a></li>
-									<li><a href="#">JK</a></li>
-									<li><a href="#">お惣菜屋さん</a></li>
-									<li><a href="#">高校生</a></li>
-									<li><a href="#">ゲロリ</a></li>
-									<li><a href="#">JK</a></li>
-									<li><a href="#">ヴィジュアルサロン</a></li>
-									<li><a href="#">高校生</a></li>
-									<li><a href="#">ゲロリ</a></li>
-									<li><a href="#">JK</a></li>
-									<li><a href="#">骨董品</a></li>
-									<li><a href="#">高校生</a></li>
-									<li><a href="#">ゲロリ</a></li>
-									<li><a href="#">JK</a></li>
-									<li><a href="#">B系</a></li>
-									<li><a href="#">高校生</a></li>
-									<li><a href="#">ゲロリ</a></li>
-									<li><a href="#">JK</a></li>
+									<?php foreach ($categories as $category): ?>
+										<li><a href="/category/<?=$category['id']?>"><?=$category['name']?></a></li>
+									<?php endforeach; ?>
 								</ul>
 							</div>
+
+							<!-- <pre><?php print_r($videos)?></pre> -->
 
 							<h1>9999件の無料セックス動画があります。</h1>
 
 							<!-- Post -->
 								<ul id="tiles">
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<label> </label><span><a href="#">牛乳瓶</a> <a href="#">キョロ</a> <a href="#">マロニー</a></span>
@@ -85,7 +62,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span><br />
@@ -93,7 +70,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
@@ -101,7 +78,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
@@ -109,7 +86,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
@@ -117,7 +94,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
@@ -125,7 +102,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
@@ -133,7 +110,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
@@ -141,7 +118,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
@@ -149,7 +126,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
@@ -157,7 +134,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
@@ -165,7 +142,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#"><img src="/assets/image/pic01.jpg" width="160" height="120"></a>
+										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
 										<div class="post-basic-info">
 											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
 											<span><a href="#"><label> </label>素人</a></span>
