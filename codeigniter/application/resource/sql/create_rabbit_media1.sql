@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS rabbit_media1;
-CREATE DATABASE IF NOT EXISTS `rabbit_media1`;
+DROP DATABASE IF EXISTS sekusoku;
+CREATE DATABASE IF NOT EXISTS `sekusoku`;
 
-USE rabbit_media1;
+USE sekusoku;
 
 CREATE TABLE `video_master` (
   `master_id`     INT(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '動画マスターID',
