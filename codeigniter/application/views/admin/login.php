@@ -40,7 +40,7 @@
 								<div class="form-group">
 									<button type="submit" class="btn btn-primary btn-lg btn-block">Sign In</button>
 								</div>
-							</form>
+							<?php echo form_close(); ?>
 						</div>
 
 						<div class="modal-footer"></div>
