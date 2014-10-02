@@ -2,13 +2,37 @@
 
 class LogicThumbnail {
 
+	protected $CI;
+
 	const XVIDEOS_VIDEO_URL			=	'http://www.xvideos.com/video%video_id%/';	// XVIDEOSの動画URL
 	const XVIDEOS_THUMBNAIL_NUM		=	30;											// XVIDEOSのサムネイル枚数
 
+	function __construct()
+	{
+		$this->CI =& get_instance();
+		$this->CI->load->model('crawler_video_id_model');
+	}
+
 	/**
-	 * XVIDEOSから指定動画IDのサムネイルURLを取得する
+	 * 指定動画IDのサムネイルURLを取得する
 	 */
-	public function get_from_xvideos($video_id)
+	public function get($type, $video_id)
+	{
+		// サムネイル配列
+		$thumbnails = array();
+
+		if ($type == crawler_video_id_model::TYPE_XVIDEOS)
+		{
+			$thumbnails = $this->_get_from_xvideos($video_id);
+		}
+
+		return $thumbnails;
+	}
+
+	/**
+	 * XVIDEOSから取得する
+	 */
+	private function _get_from_xvideos($video_id)
 	{
 		// サムネイル配列
 		$thumbnails = array();
@@ -39,5 +63,3 @@ class LogicThumbnail {
 		return $thumbnails;
 	}
 }
-
-/* End of file LogicThumbnail.php */
