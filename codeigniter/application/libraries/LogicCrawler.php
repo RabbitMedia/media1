@@ -2,6 +2,8 @@
 
 class LogicCrawler {
 
+	protected $CI;
+
 	const CRAWL_PAGE_NUM			=	2;				// クロールするページ数
 
 	const BASE_URL_TENGOKU			=	'http://www.tengokudouga.com/';
@@ -9,6 +11,11 @@ class LogicCrawler {
 
 	const BASE_URL_NUKIST			=	'http://www.nukistream.com/';
 	const PAGE_URL_NUKIST			=	'http://www.nukistream.com/?p=%page_num%';
+
+	function __construct()
+	{
+		$this->CI =& get_instance();
+	}
 
 	/**
 	 * 指定サイトから動画情報を取得する
@@ -233,6 +240,49 @@ class LogicCrawler {
 		$reversed = array_reverse($videos);
 
 		return $reversed;
+	}
+
+	/**
+	 * クローラーが集めてきた動画を取得する
+	 */
+	public function get_crawled_videos()
+	{
+		// ロード
+		$this->CI->load->model('crawler_video_master_model');
+		$this->CI->load->model('crawler_video_id_model');
+		$this->CI->load->model('crawler_video_title_model');
+		$media = parse_ini_file(APPPATH.'resource/ini/media.ini', true);
+
+		// 動画マスター情報を取得する
+		$videos = $this->CI->crawler_video_master_model->get();
+		
+		// 動画マスター情報をもとに詳細情報を取得する
+		foreach ($videos as $id => $video)
+		{
+			// 動画タイプと動画IDを取得する
+			$results = $this->CI->crawler_video_id_model->get($video['crawler_master_id']);
+			if (!empty($results))
+			{
+				foreach ($results as $key => $value)
+				{
+					$videos[$id]['type'][$key] = $value['type'];
+					$videos[$id]['video_url_id'][$key] = $value['video_url_id'];
+				}
+			}
+
+			// 動画掲載メディアと動画タイトルを取得する
+			$results = $this->CI->crawler_video_title_model->get($video['crawler_master_id']);
+			if (!empty($results))
+			{
+				foreach ($results as $key => $value)
+				{
+					$videos[$id]['media'][$key] = $media[$value['media']]['name'];
+					$videos[$id]['title'][$key] = $value['title'];
+				}
+			}
+		}
+
+		return $videos;
 	}
 
 	/**

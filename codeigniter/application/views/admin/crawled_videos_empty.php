@@ -8,6 +8,7 @@
 		<script src="/js/skel.min.js"></script>
 		<script src="/js/skel-layers.min.js"></script>
 		<script src="/js/init.js"></script>
+		<script src="/js/jquery.quicksearch.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="/css/skel.css" />
 			<link rel="stylesheet" href="/css/style.css" />
@@ -25,7 +26,7 @@
 					<div id="content">
 						<div class="inner">
 
-						
+							<h1>アップ待ちの動画はありません</h1>
 
 						</div>
 					</div>
@@ -39,7 +40,7 @@
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li><a href="/admin/crawled_videos">アップ待ち</a></li>
+									<li class="current"><a href="/admin/crawled_videos">アップ待ち（<?=$total_count?>）</a></li>
 									<li><a href="/admin">アップ済み</a></li>
 									<li><a href="/admin/logout">ログアウト</a></li>
 								</ul>
