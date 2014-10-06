@@ -35,30 +35,6 @@ class Video_id_model extends CI_Model
 	}
 
 	/**
-	 * 動画タイプと動画URLIDによるレコード取得
-	 */
-	public function get_by_url($type, $video_url_id)
-	{
-		// select
-		$this->db->select('master_id');
-		// where
-		$this->db->where('type', $type);
-		$this->db->where('video_url_id', $video_url_id);
-
-		// クエリの実行
-		$query = $this->db->get($this->table_name);
-		// 該当するレコードがある場合は結果を配列で返す
-		if ($query->num_rows() > 0)
-		{
-			return $query->result_array();
-		}
-		else
-		{
-			return null;
-		}
-	}
-
-	/**
 	 * レコード挿入
 	 */
 	public function insert($data)
