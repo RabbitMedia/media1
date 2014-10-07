@@ -243,6 +243,135 @@ class LogicCrawler {
 	}
 
 	/**
+	 * クローラーが集めてきた動画を登録する
+	 */
+	public function set_crawled_videos($contents)
+	{
+		// ロード
+		$this->CI->load->model('crawler_video_master_model');
+		$this->CI->load->model('crawler_video_id_model');
+		$this->CI->load->model('crawler_video_title_model');
+
+		foreach ($contents as $c_key => $videos)
+		{
+			foreach ($videos as $v_key => $video)
+			{
+				// 次のクローラー動画マスターIDを取得する
+				$next_crawler_master_id = $this->CI->crawler_video_master_model->get_next_crawler_master_id();
+
+				// トランザクション begin
+				$this->CI->db->trans_begin();
+
+				// crawler_video_idに登録する
+				$results = array();
+				foreach ($video['video_url_id'] as $video_url_id)
+				{
+					$data = array(
+						'crawler_master_id'	=> $next_crawler_master_id,
+						'type'				=> $video['type'],
+						'video_url_id'		=> $video_url_id,
+						);
+					$results[] = $this->CI->crawler_video_id_model->insert($data);
+				}
+
+				// crawler_video_idに登録成功フラグ
+				$crawler_video_id_insert_flag = true;
+
+				// resultsが正常でなければinsertに失敗している
+				foreach ($results as $key => $result)
+				{
+					if (!$result)
+					{
+						// crawler_video_idに登録成功フラグ
+						$crawler_video_id_insert_flag = false;
+
+						// INSERT IGNORE により弾かれたのか確認する
+						$exist_crawler_master_id = $this->CI->crawler_video_id_model->get_by_url($video['type'], $video['video_url_id'][$key]);
+
+						// INSERT IGNORE により弾かれた場合はタイトルを登録する
+						if ($exist_crawler_master_id)
+						{
+							// crawler_video_titleに登録する
+							$data = array(
+								'crawler_master_id'	=> $exist_crawler_master_id,
+								'media'				=> $video['media'],
+								'title'				=> $video['title'],
+								);
+							$affected_rows = $this->CI->crawler_video_title_model->insert($data);
+
+							// affected_rowsがなければinsertに失敗している
+							if (!$affected_rows)
+							{
+								// トランザクション rollback
+								$this->CI->db->trans_rollback();
+
+								break;
+							}
+						}
+						else
+						{
+							// トランザクション rollback
+							$this->CI->db->trans_rollback();
+
+							// ログを残す
+							foreach ($video['video_url_id'] as $video_url_id)
+							{
+								log_message('error', '[set_crawled_videos crawler_video_id_model->insert ERROR] type:'.$video['type'].' video_url_id:'.$video_url_id);
+							}
+
+							break;
+						}
+					}
+				}
+
+				if (!$crawler_video_id_insert_flag)
+				{
+					// トランザクション commit
+					$this->CI->db->trans_commit();
+
+					continue;
+				}
+
+				// crawler_video_masterに登録する
+				$data = array(
+					'crawler_master_id'	=> $next_crawler_master_id,
+					'duration'			=> $video['duration'],
+					);
+				$affected_rows = $this->CI->crawler_video_master_model->insert($data);
+
+				// affected_rowsがなければinsertに失敗している
+				if (!$affected_rows)
+				{
+					// トランザクション rollback
+					$this->CI->db->trans_rollback();
+
+					continue;
+				}
+
+				// crawler_video_titleに登録する
+				$data = array(
+					'crawler_master_id'	=> $next_crawler_master_id,
+					'media'				=> $video['media'],
+					'title'				=> $video['title'],
+					);
+				$affected_rows = $this->CI->crawler_video_title_model->insert($data);
+
+				// affected_rowsがなければinsertに失敗している
+				if (!$affected_rows)
+				{
+					// トランザクション rollback
+					$this->CI->db->trans_rollback();
+
+					continue;
+				}
+
+				// トランザクション commit
+				$this->CI->db->trans_commit();
+			}
+		}
+	}
+
+	/**
 	 * クローラーが集めてきた動画を取得する
 	 */
 	public function get_crawled_videos()

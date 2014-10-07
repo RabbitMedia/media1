@@ -35,6 +35,22 @@ class Crawler_video_title_model extends CI_Model
 	}
 
 	/**
+	 * レコード挿入
+	 */
+	public function insert($data)
+	{
+		// 作成日時と更新日時をセットする
+		$data['create_time'] = $data['update_time'] = date('Y-m-d H:i:s');
+
+		$insert_query = $this->db->insert_string($this->table_name, $data);
+
+		// クエリの実行
+		$this->db->query($insert_query);
+
+		return $this->db->affected_rows();
+	}
+
+	/**
 	 * レコード削除
 	 */
 	public function delete($crawler_master_id)
