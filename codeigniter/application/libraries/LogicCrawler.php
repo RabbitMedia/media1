@@ -291,6 +291,16 @@ class LogicCrawler {
 						// INSERT IGNORE により弾かれた場合はタイトルを登録する
 						if ($exist_crawler_master_id)
 						{
+							// 同じタイトルが既に存在する場合は登録しない
+							$exist_titles = $this->CI->crawler_video_title_model->get($exist_crawler_master_id);
+							foreach ($exist_titles as $e_key => $value)
+							{
+								if ($value['title'] == $video['title'])
+								{
+									break 2;
+								}
+							}
+
 							// crawler_video_titleに登録する
 							$data = array(
 								'crawler_master_id'	=> $exist_crawler_master_id,
