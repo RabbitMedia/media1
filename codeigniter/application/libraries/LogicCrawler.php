@@ -382,9 +382,18 @@ class LogicCrawler {
 		$this->CI->load->model('crawler_video_title_model');
 		$media = parse_ini_file(APPPATH.'resource/ini/media.ini', true);
 
+		// 動画配列
+		$videos = array();
+
 		// 動画マスター情報を取得する
 		$videos = $this->CI->crawler_video_master_model->get();
 		
+		// 動画がなければ何もしない
+		if (!$videos)
+		{
+			return $videos;
+		}
+
 		// 動画マスター情報をもとに詳細情報を取得する
 		foreach ($videos as $id => $video)
 		{
