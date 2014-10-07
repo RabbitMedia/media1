@@ -56,23 +56,29 @@
 									<article>
 										<p><?=$video['create_time']?>にクロールされた動画</p>
 										<p id="videoPush<?=$id+1?>" class="button">動画を確認する（<?=$video['duration']?>）</p>
-										<?php foreach ($video['embed_tag'] as $embed_tag): ?>
-											<div id="video<?=$id+1?>">
+										<div id="video<?=$id+1?>">
+											<?php foreach ($video['embed_tag'] as $embed_tag): ?>
 												<div class="rwd_embed">
 													<?=$embed_tag?>
 												</div>
-											</div>
-										<?php endforeach; ?>
+											<?php endforeach; ?>
+										</div>
 										<?php foreach ($video['title'] as $key => $value): ?>
 											<p><?=$value?>(<?=$video['media'][$key]?>)</p>
 										<?php endforeach; ?>
 										<?php echo form_open('admin/upload'); ?>
 											<p><input type="text" name="title" value="" placeholder="タイトルを入力" required="true"></p>
-											<?php foreach ($video['thumbnail'] as $thumbnail): ?>
-												<?php foreach ($thumbnail as $value): ?>
-													<img src="<?=$value?>" width="80" height="60"><input type="radio" name="thumbnail" value="<?=$value?>" required="true">
+											<?php if ($video['thumbnail']): ?>
+												<?php foreach ($video['thumbnail'] as $thumbnail): ?>
+													<?php if ($thumbnail): ?>
+														<?php foreach ($thumbnail as $value): ?>
+															<img src="<?=$value?>" width="80" height="60"><input type="radio" name="thumbnail" value="<?=$value?>" required="true">
+														<?php endforeach; ?>
+													<?php else: ?>
+														<p>サムネイルの取得に失敗しました</p>
+													<?php endif; ?>
 												<?php endforeach; ?>
-											<?php endforeach; ?>
+											<?php endif; ?>
 											<p><input type="text" name="search" placeholder="メインカテゴリー選択" id="search1">
 											<select name="main_category[]" multiple required>
 												<?php foreach ($categories as $category): ?>
