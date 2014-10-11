@@ -1,215 +1,391 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 	<head>
-		<title>無料セックス動画まとめ【セックル速報】</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
-		<script src="/js/jquery.min.js"></script>
-		<script src="/js/skel.min.js"></script>
-		<script src="/js/skel-layers.min.js"></script>
-		<script src="/js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="/css/skel.css" />
-			<link rel="stylesheet" href="/css/style.css" />
-			<link rel="stylesheet" href="/css/style-desktop.css" />
-			<link rel="stylesheet" href="/css/style-wide.css" />
-		</noscript>
-		<script type="text/javascript">
-			$(function(){
-				$("#category").css("display", "none");
-				$("#categoryPush").click(function(){
-					$("#category").slideToggle();
-				});
-			});
-		</script>
-		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+		<title>無料セックス動画まとめ【セックル速報】</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<!-- Custom styles for Sticky footer with fixed navbar -->
+		<link rel="stylesheet" href="/css/sticky-footer-navbar.css">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
 	</head>
-	<?php
-		// Note: Set the body element's class to "left-sidebar" to position the sidebar on the left.
-		// Set it to "right-sidebar" to, you guessed it, position it on the right.
-	?>
-	<body class="left-sidebar">
+	<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target=".openmodal"><span class="glyphicon glyphicon-th-list"></span></button>
+					<a class="navbar-brand" href="/">セックル速報</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<p class="navbar-text navbar-right">無料セックス動画を毎日更新！</p>
+				</div>
+			</div>
+		</nav>
 
-				<!-- Content -->
-					<div id="content">
-						<div class="inner">
+		<div class="container">
 
-							<div id="category">
-								<ul>
-									<?php foreach ($categories as $category): ?>
-										<li><a href="/category/<?=$category['id']?>"><?=$category['name']?></a></li>
-									<?php endforeach; ?>
-								</ul>
-							</div>
+			<div class="row">
 
-							<!-- <pre><?php print_r($videos)?></pre> -->
-
-							<h1>9999件の無料セックス動画があります。</h1>
-
-							<!-- Post -->
-								<ul id="tiles">
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<label> </label><span><a href="#">牛乳瓶</a> <a href="#">キョロ</a> <a href="#">マロニー</a></span>
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span><br />
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span>
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span>
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span>
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span>
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span>
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span>
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span>
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span>
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span>
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-									<li>
-										<a href="#"><img src="/image/pic01.jpg" width="160" height="120"></a>
-										<div class="post-basic-info">
-											<h3><a href="#">あいうえおかきくけこさしすせそたちつてと</a></h3>
-											<span><a href="#"><label> </label>素人</a></span>
-											<p>2014年12月31日</p>
-										</div>
-									</li>
-								</ul>
-
-							<!-- Pagination -->
-								<div class="pagination">
-									<a href="#" class="button previous">前のページ</a>
-									<div class="pages">
-										<a href="#" class="active">1</a>
-										<a href="#">2</a>
-										<a href="#">3</a>
-										<a href="#">4</a>
-										<span>&hellip;</span>
-										<a href="#">20</a>
-									</div>
-									<a href="#" class="button next">次のページ</a>
-								</div>
-
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-					
-						<!-- Logo -->
-							<div id="logo"><a href="/">セックル速報</a></div>
-					
-						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li class="current"><a href="/">新着動画</a></li>
-									<li id="categoryPush"><a href="#categories">カテゴリー</a></li>
-								</ul>
-							</nav>
-
-						<!-- Search -->
-							<section class="box search">
-								<form method="post" action="#">
-									<input type="text" class="text" name="search" placeholder="キーワード検索" />
-								</form>
-							</section>
-
-						<!-- Nav -->
-							<nav id="nav2">
-								<ul>
-									<li><a href="#">サイトポリシー</a></li>
-									<li><a href="#">広告掲載について</a></li>
-									<li><a href="#">お問い合わせ</a></li>
-								</ul>
-							</nav>
-
-						<!-- Text -->
-							<section class="box text-style1">
-								<div class="inner">
-									<p>Copyright &copy; <?php echo date("Y"); ?></p>
-									<p>セックル速報</p>
-									<p>All Rights Reserved.</p>
-								</div>
-							</section>
-
-					</div>
+				<div class="col-xs-12">
+					<ol class="breadcrumb">
+						<li><a href="#">トップ</a></li>
+						<li><a href="#">カテゴリー名</a></li>
+						<li class="active">動画タイトル</li>
+					</ol>
+				</div>
 
 			</div>
 
+			<div class="row">
+
+				<div class="col-xs-12">
+					<h1>99999件の無料セックス動画があります。</h1>
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<a href=""><img src="http://img100-718.xvideos.com/videos/thumbsl/a7/93/51/a79351512e7a3141ca82f0f0307fc245/a79351512e7a3141ca82f0f0307fc245.5.jpg" alt="..." class="img-rounded img-responsive"></a>
+						<div class="caption">
+							<h2><a href="">この動画おもしろすぎわろたｗｗｗｗ</a></h2>
+							<p><a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a> <a href=""><span class="label label-danger">はひふへほ</span></a></p>
+							<p>2014年12月31日</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-xs-12 hidden-xs text-center">
+					<ul class="pagination pagination-lg">
+						<li><a href="#">前へ</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">次へ</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 visible-xs text-center">
+					<ul class="pagination">
+						<li><a href="#">前へ</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">次へ</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="footer">
+			<div class="container text-center">
+				<p class="text-muted">Copyright &copy; <?php echo date("Y"); ?> 無料セックス動画まとめ【セックル速報】All Rights Reserved.</p>
+			</div>
+		</div>
+
+		<div class="modal fade openmodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="container">
+							<div class="navbar-header">
+								<button type="button" class="btn btn-default navbar-btn navbar-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+							</div>
+						</div>
+					</nav>
+
+					<div class="container">
+
+						<div class="row">
+
+							<div class="col-xs-12">
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="無料セックス動画の検索はこちらから">
+											<span class="input-group-btn">
+												<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+											</span>
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<div class="col-xs-12">
+								<!-- <h3>カテゴリー検索</h3> -->
+								<div class="well">
+									<ul class="pager">
+										<?php foreach ($categories as $category): ?>
+											<li><a href="/category/<?=$category['id']?>"><?=$category['name']?></a></li>
+										<?php endforeach; ?>
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-xs-12">
+								<ul class="nav nav-pills">
+									<li><a href="">ホーム</a></li>
+									<li><a href="">サイトポリシー</a></li>
+									<li><a href="">広告掲載について</a></li>
+									<li><a href="">お問い合わせ</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="/js/ie10-viewport-bug-workaround.js"></script>
+		<!-- EqualHeight.js -->
+		<script src="/js/jquery.equalheight.min.js"></script>
+		<!-- EqualHeight.js -->
+		<script>
+			$(function() {
+				var equalHeight = $('.caption h2').equalHeight({wait: true});
+				// Browser supports matchMedia
+				if (window.matchMedia) {
+					// MediaQueryList
+					var mql = window.matchMedia("(min-width: 500px)");
+					// MediaQueryListListener
+					var equalHeightCheck = function (mql) {
+						if (mql.matches) {
+							equalHeight.start();
+						} else {
+							equalHeight.stop();
+						}
+					};
+					// Add listener
+					mql.addListener(equalHeightCheck);
+					// Manually call listener
+					equalHeightCheck(mql);
+				}
+				// Browser doesn't support matchMedia
+				else {
+					equalHeight.start();
+				}
+			});
+		</script>
 	</body>
 </html>
