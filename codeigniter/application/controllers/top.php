@@ -20,23 +20,33 @@ class Top extends CI_Controller
 	 * map to /index.php/top/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function index($master_id = 0)
 	{
 		$data = array();
-		// $this->load->Library('LogicCrawler');
-		// $data['videos'] = $this->logiccrawler->get_from_tengoku();
 
-		$category_csv = AppCsvLoader::load('category.csv');
-		foreach ($category_csv as $key => $value)
+		// master_idがあれば動画ページを表示する
+		if ($master_id)
 		{
-			$category['name'] = $value['name'];
-			$category['id'] = $value['id'];
-			$categories[] = $category;
+			$this->load->view('video', $data);
 		}
+		// master_idがなければトップページを表示する
+		else
+		{
+			// $this->load->Library('LogicCrawler');
+			// $data['videos'] = $this->logiccrawler->get_from_tengoku();
 
-		$data['categories'] = $categories;
+			$category_csv = AppCsvLoader::load('category.csv');
+			foreach ($category_csv as $key => $value)
+			{
+				$category['name'] = $value['name'];
+				$category['id'] = $value['id'];
+				$categories[] = $category;
+			}
 
-		$this->load->view('top', $data);
+			$data['categories'] = $categories;
+
+			$this->load->view('top', $data);
+		}
 	}
 }
 

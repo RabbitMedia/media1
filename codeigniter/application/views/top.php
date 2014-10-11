@@ -4,14 +4,28 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="copyright" content="&copy;セックル速報" />
+		<meta name="description" content="セックル速報は、無料でセックス動画を楽しめるセックス動画まとめサイトです。" />
+		<meta name="keywords" content="セックス動画" />
+		<meta property="og:title" content="セックル速報 - 無料セックス動画まとめ" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="" />
+		<meta property="og:url" content="http://sekusoku.com/" />
+		<meta property="og:description" content="セックル速報は、無料でセックス動画を楽しめるセックス動画まとめサイトです。" />
+		<meta property="og:site_name" content="セックル速報 - 無料セックス動画まとめ" />
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@sekusoku">
+		<link rel="canonical" href="http://sekusoku.com/" />
 		<title>無料セックス動画まとめ【セックル速報】</title>
+		<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico" />
+		<link rel="icon" type="image/png" href="/image/favicon.png" />
+		<link rel="apple-touch-icon-precomposed" href="/image/apple-touch-icon-precomposed.png" />
 
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="/css/bootstrap.min.css">
 		<!-- Custom styles for Sticky footer with fixed navbar -->
 		<link rel="stylesheet" href="/css/sticky-footer-navbar.css">
+
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -353,9 +367,10 @@
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="/js/ie10-viewport-bug-workaround.js"></script>
 		<!-- EqualHeight.js -->
