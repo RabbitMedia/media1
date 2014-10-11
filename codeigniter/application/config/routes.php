@@ -41,6 +41,8 @@
 $route['default_controller'] = "top";
 $route['404_override'] = '';
 
+// 動画ページ
+$route['(:num)'] = "top/index/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
