@@ -14,7 +14,6 @@ class Admin extends CI_Controller
 		$this->load->library('pagination');
 		$this->load->library('LogicAdmin');
 		$this->load->library('LogicCrawler');
-		$this->load->library('LogicPagination');
 		$this->load->library('LogicThumbnail');
 		$this->load->library('LogicEmbed');
 		$this->load->library('LogicVideoManage');
@@ -124,14 +123,31 @@ class Admin extends CI_Controller
 		}
 
 		// ページネーション
-		$config['total_count'] = $data['total_count'];	// コンテンツ総数
-		$config['count_per_page'] = 1;					// 1ページあたりのコンテンツ表示数
-		$config['num_links_left'] = 1;					// ページ番号の表示数(左)
-		$config['num_links_right'] = 2;					// ページ番号の表示数(右)
-		$data['pagination'] = $this->logicpagination->get($page, $config);
+		$config['base_url'] = '/admin/crawled_videos/';
+		$config['total_rows'] = $data['total_count'];
+		$config['per_page'] = 1;
+		$config['use_page_numbers'] = true;
+		$config['uri_segment'] = 3;
+		$config['num_links'] = 2;
+		$config['first_link'] = false;
+		$config['last_link'] = false;
+		$config['full_tag_open'] = '';
+		$config['full_tag_close'] = '';
+		$config['prev_link'] = '前へ';
+		$config['prev_tag_open'] = '<li>';
+		$config['prev_tag_close'] = '</li>';
+		$config['next_link'] = '次へ';
+		$config['next_tag_open'] = '<li>';
+		$config['next_tag_close'] = '</li>';
+		$config['cur_tag_open'] = '<li class="active"><a href="">';
+		$config['cur_tag_close'] = '</a></li>';
+		$config['num_tag_open'] = '<li>';
+		$config['num_tag_close'] = '</li>';
+		$this->pagination->initialize($config);
+		$data['pagination'] = $this->pagination->create_links();
 
 		// 該当ページに表示する動画を取得する(mysqlのlimitとphpのarray_sliceではどっちが速いかは未検証)
-		$data['videos'] = array_slice($videos, (($page - 1) * $config['count_per_page']), $config['count_per_page']);
+		$data['videos'] = array_slice($videos, (($page - 1) * $config['per_page']), $config['per_page']);
 
 		foreach ($data['videos'] as $id => $video)
 		{

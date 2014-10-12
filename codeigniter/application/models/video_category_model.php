@@ -69,11 +69,14 @@ class Video_category_model extends CI_Model
 		// 作成日時と更新日時をセットする
 		$data['create_time'] = $data['update_time'] = date('Y-m-d H:i:s');
 
-		// クエリの実行
-		$this->db->insert($this->table_name, $data);
+		// クエリの生成
+		$insert_query = $this->db->insert_string($this->table_name, $data);
 
-		// 挿入したID番号を返す
-		return $this->db->insert_id();
+		// クエリの実行
+		$this->db->query($insert_query);
+
+		// 処理された行数を返す
+		return $this->db->affected_rows();
 	}
 
 	/**
