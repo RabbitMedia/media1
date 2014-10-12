@@ -26,7 +26,7 @@ class LogicVideoManage
 		// video_masterに登録する
 		$data = array(
 			'title'			=> html_escape($item['title']),
-			'thumbnail_url'	=> $item['thumbnail'],
+			'thumbnail_url'	=> str_replace('thumbs', 'thumbsl', $item['thumbnail']),
 			'duration'		=> $item['duration'],
 			);
 		$master_id = $this->CI->video_master_model->insert($data);
