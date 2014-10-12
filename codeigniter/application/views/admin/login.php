@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="copyright" content="&copy;セックル速報" />
 		<meta name="robots" content="NOINDEX,NOFOLLOW" />
-		<title>管理画面</title>
+		<title>Dashboard</title>
 		<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico" />
 		<link rel="icon" type="image/png" href="/image/favicon.png" />
 		<link rel="apple-touch-icon-precomposed" href="/image/apple-touch-icon-precomposed.png" />

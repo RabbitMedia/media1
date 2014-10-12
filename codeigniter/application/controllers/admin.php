@@ -96,6 +96,11 @@ class Admin extends CI_Controller
 	{
 		$data = array();
 
+		// クローラーが集めてきた動画を取得する
+		$videos = $this->logiccrawler->get_crawled_videos();
+		// アップ待ち動画数
+		$data['total_count'] = count($videos);
+
 		$this->load->view('admin/index', $data);
 	}
 
