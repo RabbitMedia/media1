@@ -28,22 +28,7 @@
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="/admin">Dashboard</a>
-				</div>
-
-				<div class="collapse navbar-collapse" id="mobile-menu">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="/admin/crawled_videos">アップ待ち <span class="badge"><?=$total_count?></span></a></li>
-						<li><a href="/admin">アップ済み</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/admin/logout">ログアウト</a></li>
-					</ul>
+					<a class="navbar-brand" href="/dashboard/login">Dashboard</a>
 				</div>
 			</div>
 		</nav>
@@ -52,8 +37,27 @@
 
 			<div class="row">
 
-				<div class="col-xs-12 text-center">
-					<h1>アップ待ちの動画はありません</h1>
+				<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body text-center">
+							<h1>Login</h1>
+							<?php echo form_open('dashboard/login', array('role' => 'form')); ?>
+								<div class="form-group">
+									<input type="text" class="form-control" name="username" value="<?php echo set_value('username'); ?>" placeholder="Username" required autofocus>
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" name="password" value="<?php echo set_value('password'); ?>" placeholder="Password" required>
+								</div>
+								<p class="text-danger"><?php echo validation_errors(); ?></p>
+								<?php if ($error_flag == true): ?>
+									<p class="text-danger">Login Failed</p>
+								<?php endif; ?>
+								<div class="form-group">
+									<button type="submit" class="btn btn-lg btn-default btn-block">Login</button>
+								</div>
+							<?php echo form_close(); ?>
+						</div>
+					</div>
 				</div>
 
 			</div>

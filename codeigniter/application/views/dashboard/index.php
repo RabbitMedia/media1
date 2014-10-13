@@ -24,23 +24,7 @@
 		<![endif]-->
 	</head>
 	<body>
-
-		<!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/admin">Dashboard</a>
-				</div>
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="/admin/crawled_videos">アップ待ち</a></li>
-						<li><a href="/admin">アップ済み</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/admin/logout">ログアウト</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav> -->
+		
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
@@ -49,16 +33,16 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/admin">Dashboard</a>
+					<a class="navbar-brand" href="/dashboard">Dashboard</a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="mobile-menu">
 					<ul class="nav navbar-nav">
-						<li><a href="/admin/crawled_videos">アップ待ち <span class="badge"><?=$total_count?></span></a></li>
-						<li><a href="/admin">アップ済み</a></li>
+						<li><a href="/dashboard/crawled_videos">アップ待ち <span class="badge"><?=$total_count?></span></a></li>
+						<li><a href="/dashboard">アップ済み</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/admin/logout">ログアウト</a></li>
+						<li><a href="/dashboard/logout">ログアウト</a></li>
 					</ul>
 				</div>
 			</div>

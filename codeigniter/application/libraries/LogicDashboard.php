@@ -3,14 +3,14 @@
 /**
  * 管理画面ロジック
  */
-class LogicAdmin
+class LogicDashboard
 {
 	protected $CI;
 
 	function __construct()
 	{
 		$this->CI =& get_instance();
-		$this->CI->load->model('admin_model');
+		$this->CI->load->model('dashboard_model');
 	}
 
 	/**
@@ -22,7 +22,7 @@ class LogicAdmin
 		$valid_flag = false;
 
 		// 有効なアカウントを取得する
-		$result = $this->CI->admin_model->get_valid_account($username, md5($password));
+		$result = $this->CI->dashboard_model->get_valid_account($username, md5($password));
 
 		if (!is_null($result))
 		{

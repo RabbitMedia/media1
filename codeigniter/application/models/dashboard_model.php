@@ -3,12 +3,12 @@
 /**
  * 管理画面モデル
  */
-class Admin_model extends CI_Model
+class Dashboard_model extends CI_Model
 {
 	function __construct()
 	{
 		parent::__construct();
-		$this->table_name = 'admin';
+		$this->table_name = 'dashboard';
 	}
 
 	/**

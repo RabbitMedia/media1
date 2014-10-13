@@ -3,7 +3,7 @@
 /**
  * 管理画面コントローラ
  */
-class Admin extends CI_Controller
+class Dashboard extends CI_Controller
 {
 	function __construct()
 	{
@@ -12,7 +12,7 @@ class Admin extends CI_Controller
 		$this->load->library('session');
 		$this->load->library('form_validation');
 		$this->load->library('pagination');
-		$this->load->library('LogicAdmin');
+		$this->load->library('LogicDashboard');
 		$this->load->library('LogicCrawler');
 		$this->load->library('LogicThumbnail');
 		$this->load->library('LogicEmbed');
@@ -21,9 +21,9 @@ class Admin extends CI_Controller
 		$this->load->helper('form');
 
 		// ログインチェック
-		if (($this->uri->uri_string() != 'admin/login') && !$this->session->userdata('is_login'))
+		if (($this->uri->uri_string() != 'dashboard/login') && !$this->session->userdata('is_login'))
 		{
-			redirect('admin/login');
+			redirect('dashboard/login');
 		}
 	}
 
@@ -37,7 +37,7 @@ class Admin extends CI_Controller
 		// ログインしている状態
 		if ($this->session->userdata('is_login') == true)
 		{
-			redirect('admin/index');
+			redirect('dashboard/index');
 		}
 
 		// ログインエラーフラグ
@@ -55,7 +55,7 @@ class Admin extends CI_Controller
 		if ($this->form_validation->run() == true)
 		{
 			// アカウントチェック
-			$valid_flag = $this->logicadmin->check_account($username, $password);
+			$valid_flag = $this->logicdashboard->check_account($username, $password);
 			// アカウントが有効であればログイン
 			if ($valid_flag)
 			{
@@ -63,7 +63,7 @@ class Admin extends CI_Controller
 				$this->session->sess_create();
 				$this->session->set_userdata(array('is_login' => true));
 				$this->session->set_userdata(array('username' => $username));
-				redirect('admin/index');
+				redirect('dashboard/index');
 			}
 			else
 			{
@@ -76,7 +76,7 @@ class Admin extends CI_Controller
 		$data['username'] = $username;
 		$data['password'] = $password;
 
-		$this->load->view('admin/login', $data);
+		$this->load->view('dashboard/login', $data);
 	}
 
 	/**
@@ -85,7 +85,7 @@ class Admin extends CI_Controller
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect('admin/login');
+		redirect('dashboard/login');
 	}
 
 	/**
@@ -100,7 +100,7 @@ class Admin extends CI_Controller
 		// アップ待ち動画数
 		$data['total_count'] = count($videos);
 
-		$this->load->view('admin/index', $data);
+		$this->load->view('dashboard/index', $data);
 	}
 
 	/**
@@ -118,12 +118,12 @@ class Admin extends CI_Controller
 		// 動画がなければ何もしない
 		if ($data['total_count'] == 0)
 		{
-			$this->load->view('admin/crawled_videos_empty', $data);
+			$this->load->view('dashboard/crawled_videos_empty', $data);
 			return;
 		}
 
 		// ページネーション
-		$config['base_url'] = '/admin/crawled_videos/';
+		$config['base_url'] = '/dashboard/crawled_videos/';
 		$config['total_rows'] = $data['total_count'];
 		$config['per_page'] = 1;
 		$config['use_page_numbers'] = true;
@@ -172,7 +172,7 @@ class Admin extends CI_Controller
 		}
 		$data['categories'] = $categories;
 
-		$this->load->view('admin/crawled_videos', $data);
+		$this->load->view('dashboard/crawled_videos', $data);
 	}
 
 	/**
@@ -207,7 +207,7 @@ class Admin extends CI_Controller
 		}
 
 		// 管理画面アップ待ち動画へ戻る
-		redirect('admin/crawled_videos/');
+		redirect('dashboard/crawled_videos/');
 	}
 
 	/**
@@ -234,6 +234,6 @@ class Admin extends CI_Controller
 		}
 
 		// 管理画面アップ待ち動画へ戻る
-		redirect('admin/crawled_videos/');
+		redirect('dashboard/crawled_videos/');
 	}
 }

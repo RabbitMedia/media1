@@ -35,16 +35,16 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/admin">Dashboard</a>
+					<a class="navbar-brand" href="/dashboard">Dashboard</a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="mobile-menu">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="/admin/crawled_videos">アップ待ち <span class="badge"><?=$total_count?></span></a></li>
-						<li><a href="/admin">アップ済み</a></li>
+						<li class="active"><a href="/dashboard/crawled_videos">アップ待ち <span class="badge"><?=$total_count?></span></a></li>
+						<li><a href="/dashboard">アップ済み</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/admin/logout">ログアウト</a></li>
+						<li><a href="/dashboard/logout">ログアウト</a></li>
 					</ul>
 				</div>
 			</div>
@@ -62,7 +62,7 @@
 
 				</div>
 
-				<?php echo form_open('admin/upload'); ?>
+				<?php echo form_open('dashboard/upload'); ?>
 
 				<div class="row">
 
@@ -183,7 +183,7 @@
 									<?php echo form_close(); ?>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6 text-center">
-									<?php echo form_open('admin/delete_crawled_videos'); ?>
+									<?php echo form_open('dashboard/delete_crawled_videos'); ?>
 										<div class="form-group">
 											<h2><label>削除確認 <input type="checkbox" name="confirm" value="" required></h2></label>
 										</div>
