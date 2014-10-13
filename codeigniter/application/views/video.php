@@ -10,7 +10,7 @@
 		<meta name="keywords" content="セックス動画,セックル速報" />
 		<meta property="og:title" content="<?=$video['title']?>【セックル速報】" />
 		<meta property="og:type" content="article" />
-		<meta property="og:image" content="" />
+		<meta property="og:image" content="<?=$video['thumbnail_url']?>" />
 		<meta property="og:url" content="http://sekusoku.com/video/<?=$video['master_id']?>" />
 		<meta property="og:description" content="【動画あり】<?=$video['title']?>これはエロすぎるｗｗｗ" />
 		<meta property="og:site_name" content="セックル速報 - 無料セックス動画まとめ" />
