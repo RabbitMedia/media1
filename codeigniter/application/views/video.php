@@ -6,18 +6,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="copyright" content="&copy;セックル速報" />
 		<meta name="robots" content="INDEX,FOLLOW" />
-		<meta name="description" content="【動画あり】動画タイトルこれはエロすぎるｗｗｗ" />
+		<meta name="description" content="【動画あり】<?=$video['title']?>これはエロすぎるｗｗｗこの他にもセックル速報には無料セックス動画が満載ｗｗｗ" />
 		<meta name="keywords" content="セックス動画,セックル速報" />
-		<meta property="og:title" content="動画タイトル【セックル速報】" />
+		<meta property="og:title" content="<?=$video['title']?>【セックル速報】" />
 		<meta property="og:type" content="article" />
 		<meta property="og:image" content="" />
-		<meta property="og:url" content="http://sekusoku.com/<?=$master_id?>" />
-		<meta property="og:description" content="【動画あり】動画タイトルこれはエロすぎるｗｗｗ" />
+		<meta property="og:url" content="http://sekusoku.com/video/<?=$video['master_id']?>" />
+		<meta property="og:description" content="【動画あり】<?=$video['title']?>これはエロすぎるｗｗｗ" />
 		<meta property="og:site_name" content="セックル速報 - 無料セックス動画まとめ" />
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="@sekusoku">
-		<link rel="canonical" href="http://sekusoku.com/<?=$master_id?>" />
-		<title>動画タイトル【セックル速報】</title>
+		<link rel="canonical" href="http://sekusoku.com/video/<?=$video['master_id']?>" />
+		<title><?=$video['title']?> | セックル速報 - 無料セックス動画まとめ</title>
 		<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico" />
 		<link rel="icon" type="image/png" href="/image/favicon.png" />
 		<link rel="apple-touch-icon-precomposed" href="/image/apple-touch-icon-precomposed.png" />
@@ -57,8 +57,8 @@
 				<div class="col-xs-12">
 					<ol class="breadcrumb">
 						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title">ホーム</span></a></li>
-						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title">カテゴリー名</span></a></li>
-						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><span itemprop="title">動画タイトル</span></li>
+						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/category/<?=$video['category'][0]['id']?>" itemprop="url"><span itemprop="title"><?=$video['category'][0]['name']?></span></a></li>
+						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><span itemprop="title"><?=$video['title']?></span></li>
 					</ol>
 				</div>
 
@@ -67,7 +67,7 @@
 			<div class="row">
 
 				<div class="col-xs-12">
-					<h1>動画タイトルｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ</h1>
+					<h1><?=$video['title']?></h1>
 				</div>
 
 			</div>
@@ -78,17 +78,23 @@
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<ul class="bxslider">
-								<li>
-									<div class="embed-responsive embed-responsive-4by3">
-										<iframe class="embed-responsive-item" src="http://flashservice.xvideos.com/embedframe/8920718"></iframe>
-									</div>
-								</li>
+								<?php foreach ($video['embed_tag'] as $embed_tag): ?>
+									<li>
+										<div class="embed-responsive embed-responsive-4by3">
+											<?=$embed_tag?>
+										</div>
+									</li>
+								<?php endforeach; ?>
 							</ul>
 							<div class="outside text-center">
 								<p><span id="slider-prev" class="slider-prev-next"></span><span id="slider-next" class="slider-prev-next"></span></p>
 							</div>
-							<p><a href=""><span class="label label-default">はひふへほ</span></a> <a href=""><span class="label label-default">はひふへほ</span></a> <a href=""><span class="label label-default">はひふへほ</span></a></p>
-							<p>2014年12月31日</p>
+							<p>
+								<?php foreach ($video['category'] as $key => $category): ?>
+									<a href="/category/<?=$category['id']?>"><span class="label label-default"><?=$category['name']?></span></a>&nbsp;
+								<?php endforeach; ?>
+							</p>
+							<p><?=$video['create_time']?></p>
 						</div>
 					</div>
 				</div>

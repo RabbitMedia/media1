@@ -13,6 +13,123 @@ class LogicVideoManage
 		$this->CI->load->model('crawler_video_master_model');
 		$this->CI->load->model('crawler_video_id_model');
 		$this->CI->load->model('crawler_video_title_model');
+		$this->CI->load->library('LogicEmbed');
+	}
+
+	/**
+	 * 最新のトップページ動画リストを取得する
+	 */
+	public function get_top_list()
+	{
+		// 動画配列
+		$videos = array();
+
+		// カテゴリーcsvロード
+		$category_csv = AppCsvLoader::load('category.csv');
+
+		// 動画マスター情報を取得する
+		$videos = $this->CI->video_master_model->get();
+
+		// 動画がなければそのまま返す
+		if (!$videos)
+		{
+			return $videos;
+		}
+
+		// 動画マスター情報をもとに詳細情報を取得する
+		foreach ($videos as $id => $video)
+		{
+			// カテゴリーを取得する
+			$results = $this->CI->video_category_model->get_by_id($video['master_id']);
+			if (!empty($results))
+			{
+				foreach ($results as $r_key => $r_value)
+				{
+					// カテゴリーcsvからカテゴリー名を取得してセット
+					foreach ($category_csv as $c_key => $c_value)
+					{
+						if ($c_value['id'] == $r_value['category'])
+						{
+							$videos[$id]['category'][$r_key]['id'] = $r_value['category'];
+							$videos[$id]['category'][$r_key]['name'] = $c_value['name'];
+						}
+					}
+				}
+			}
+
+			// 日付の形式を変更する
+			$videos[$id]['create_time'] = date('Y年n月j日', strtotime($video['create_time']));
+		}
+
+		return $videos;
+	}
+
+	/**
+	 * 動画ページ詳細を取得する
+	 */
+	public function get_details($master_id)
+	{
+		// 動画配列
+		$videos = array();
+
+		// カテゴリーcsvロード
+		$category_csv = AppCsvLoader::load('category.csv');
+
+		// 動画マスター情報を取得する
+		$videos = $this->CI->video_master_model->get_by_id($master_id);
+
+		// 動画がなければそのまま返す
+		if (!$videos)
+		{
+			return $videos;
+		}
+
+		// 動画マスター情報をもとに詳細情報を取得する
+		foreach ($videos as $v_key => $v_value)
+		{
+			// 各種情報を入れ直す
+			$video['master_id'] = $v_value['master_id'];
+			$video['title'] = $v_value['title'];
+			$video['thumbnail_url'] = $v_value['thumbnail_url'];
+			$video['duration'] = $v_value['duration'];
+
+			// カテゴリーを取得する
+			$results = $this->CI->video_category_model->get_by_id($master_id);
+			if (!empty($results))
+			{
+				foreach ($results as $r_key => $r_value)
+				{
+					// カテゴリーcsvからカテゴリー名を取得してセット
+					foreach ($category_csv as $c_key => $c_value)
+					{
+						if ($c_value['id'] == $r_value['category'])
+						{
+							$video['category'][$r_key]['id'] = $r_value['category'];
+							$video['category'][$r_key]['name'] = $c_value['name'];
+						}
+					}
+				}
+			}
+
+			// 動画IDを取得する
+			$results = $this->CI->video_id_model->get_by_id($master_id);
+			if (!empty($results))
+			{
+				foreach ($results as $r_key => $r_value)
+				{
+					$video['type'][$r_key] = $r_value['type'];
+					$video['video_url_id'][$r_key] = $r_value['video_url_id'];
+
+					// 埋め込みタグを取得する
+					$video['embed_tag'][$r_key] = $this->CI->logicembed->get($r_value['type'], $r_value['video_url_id']);
+				}
+			}
+
+			// 日付の形式を変更する
+			$video['create_time'] = date('Y年n月j日', strtotime($v_value['create_time']));
+		}
+
+		return $video;
 	}
 
 	/**

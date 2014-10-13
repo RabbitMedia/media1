@@ -35,6 +35,29 @@ class Video_master_model extends CI_Model
 	}
 
 	/**
+	 * 動画マスターIDによるレコード取得
+	 */
+	public function get_by_id($master_id)
+	{
+		// select
+		$this->db->select('master_id, title, thumbnail_url, duration, create_time');
+		// where
+		$this->db->where('master_id', $master_id);
+
+		// クエリの実行
+		$query = $this->db->get($this->table_name);
+		// 該当するレコードがある場合は結果を配列で返す
+		if ($query->num_rows() > 0)
+		{
+			return $query->result_array();
+		}
+		else
+		{
+			return null;
+		}
+	}
+
+	/**
 	 * レコード挿入
 	 */
 	public function insert($data)
