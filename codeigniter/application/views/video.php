@@ -57,7 +57,13 @@
 				<div class="col-xs-12">
 					<ol class="breadcrumb">
 						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title">ホーム</span></a></li>
-						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/category/<?=$video['category'][0]['id']?>" itemprop="url"><span itemprop="title"><?=$video['category'][0]['name']?></span></a></li>
+						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+							<?php if ($referer_flag): ?>
+								<a href="/category/<?=$referer_category_id?>" itemprop="url"><span itemprop="title"><?=$referer_category_name?></span></a>
+							<?php else: ?>
+								<a href="/category/<?=$video['category'][0]['id']?>" itemprop="url"><span itemprop="title"><?=$video['category'][0]['name']?></span></a>
+							<?php endif; ?>
+						</li>
 						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><span itemprop="title"><?=$video['title']?></span></li>
 					</ol>
 				</div>
