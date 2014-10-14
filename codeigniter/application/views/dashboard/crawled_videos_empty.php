@@ -62,7 +62,7 @@
 
 		<div class="footer">
 			<div class="container text-center">
-				<p class="text-muted">Copyright &copy; <?php echo date("Y"); ?> 無料セックス動画まとめ【セックル速報】All Rights Reserved.</p>
+				<p class="text-muted">Copyright &copy; <?php echo date("Y"); ?> セックル速報 - 無料セックス動画まとめ All Rights Reserved.</p>
 			</div>
 		</div>
 

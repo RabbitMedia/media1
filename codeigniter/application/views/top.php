@@ -111,7 +111,7 @@
 
 		<div class="footer">
 			<div class="container text-center">
-				<p class="text-muted">Copyright &copy; <?php echo date("Y"); ?> 無料セックス動画まとめ【セックル速報】All Rights Reserved.</p>
+				<p class="text-muted">Copyright &copy; <?php echo date("Y"); ?> セックル速報 - 無料セックス動画まとめ All Rights Reserved.</p>
 			</div>
 		</div>
 
@@ -131,21 +131,24 @@
 
 						<div class="row">
 
-							<div class="col-xs-12">
-								<form class="form-horizontal" role="form">
-									<div class="form-group">
-										<div class="input-group">
-											<input type="text" class="form-control" placeholder="無料セックス動画の検索はこちらから">
-											<span class="input-group-btn">
-												<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-											</span>
+							<!-- <div class="col-xs-12">
+								<h3>キーワード検索</h3>
+								<div class="col-xs-12">
+									<form class="form-horizontal" role="form">
+										<div class="form-group">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="無料セックス動画の検索はこちらから">
+												<span class="input-group-btn">
+													<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												</span>
+											</div>
 										</div>
-									</div>
-								</form>
-							</div>
+									</form>
+								</div>
+							</div> -->
 
 							<div class="col-xs-12">
-								<!-- <h3>カテゴリー検索</h3> -->
+								<h3>カテゴリー検索</h3>
 								<div class="well">
 									<ul class="pager">
 										<?php foreach ($categories as $category): ?>

@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="copyright" content="&copy;セックル速報" />
 		<meta name="robots" content="INDEX,FOLLOW" />
-		<meta name="description" content="【動画あり】<?=$video['title']?>これはエロすぎるｗｗｗこの他にもセックル速報には無料セックス動画が満載ｗｗｗ" />
+		<meta name="description" content="【動画あり】<?=$video['title']?>これはエロすぎるｗｗｗセックル速報にはこの他にも無料セックス動画が満載ｗｗｗ" />
 		<meta name="keywords" content="セックス動画,セックル速報" />
-		<meta property="og:title" content="<?=$video['title']?>【セックル速報】" />
+		<meta property="og:title" content="<?=$video['title']?> | セックル速報" />
 		<meta property="og:type" content="article" />
 		<meta property="og:image" content="<?=$video['thumbnail_url']?>" />
 		<meta property="og:url" content="http://sekusoku.com/video/<?=$video['master_id']?>" />
@@ -203,7 +203,7 @@
 
 		<div class="footer">
 			<div class="container text-center">
-				<p class="text-muted">Copyright &copy; <?php echo date("Y"); ?> 無料セックス動画まとめ【セックル速報】All Rights Reserved.</p>
+				<p class="text-muted">Copyright &copy; <?php echo date("Y"); ?> セックル速報 - 無料セックス動画まとめ All Rights Reserved.</p>
 			</div>
 		</div>
 
@@ -223,21 +223,24 @@
 
 						<div class="row">
 
-							<div class="col-xs-12">
-								<form class="form-horizontal" role="form">
-									<div class="form-group">
-										<div class="input-group">
-											<input type="text" class="form-control" placeholder="無料セックス動画の検索はこちらから">
-											<span class="input-group-btn">
-												<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-											</span>
+							<!-- <div class="col-xs-12">
+								<h3>キーワード検索</h3>
+								<div class="col-xs-12">
+									<form class="form-horizontal" role="form">
+										<div class="form-group">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="無料セックス動画の検索はこちらから">
+												<span class="input-group-btn">
+													<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												</span>
+											</div>
 										</div>
-									</div>
-								</form>
-							</div>
+									</form>
+								</div>
+							</div> -->
 
 							<div class="col-xs-12">
-								<!-- <h3>カテゴリー検索</h3> -->
+								<h3>カテゴリー検索</h3>
 								<div class="well">
 									<ul class="pager">
 										<?php foreach ($categories as $category): ?>
