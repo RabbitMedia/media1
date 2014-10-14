@@ -61,7 +61,7 @@ class LogicVideoManage
 			$videos[$id]['create_time'] = date('Y年n月j日', strtotime($video['create_time']));
 		}
 
-		return $videos;
+		return array_reverse($videos);
 	}
 
 	/**
@@ -130,6 +130,76 @@ class LogicVideoManage
 		}
 
 		return $video;
+	}
+
+	/**
+	 * 指定カテゴリーの動画リストを取得する
+	 */
+	public function get_category_list($category_id)
+	{
+		// 動画配列
+		$videos = array();
+
+		// カテゴリーcsvロード
+		$category_csv = AppCsvLoader::load('category.csv');
+
+		// 動画カテゴリーによるレコード取得
+		$videos = $this->CI->video_category_model->get_by_category($category_id);
+
+		// 動画がなければそのまま返す
+		if (!$videos)
+		{
+			return $videos;
+		}
+
+		// 動画カテゴリー情報をもとに詳細情報を取得する
+		foreach ($videos as $id => $video)
+		{
+			// 動画マスター情報を取得する
+			$video_master = $this->CI->video_master_model->get_by_id($video['master_id']);
+
+			foreach ($video_master as $m_key => $m_value)
+			{
+				// カテゴリーを取得する
+				$results = $this->CI->video_category_model->get_by_id($video['master_id']);
+				foreach ($results as $r_key => $r_value)
+				{
+					// カテゴリーcsvからカテゴリー名を取得してセット
+					foreach ($category_csv as $c_key => $c_value)
+					{
+						if ($c_value['id'] == $r_value['category'])
+						{
+							$videos[$id]['category'][$r_key]['id'] = $r_value['category'];
+							$videos[$id]['category'][$r_key]['name'] = $c_value['name'];
+						}
+					}
+				}
+
+				// 各種情報を入れ直す
+				$videos[$id]['title'] = $m_value['title'];
+				$videos[$id]['thumbnail_url'] = $m_value['thumbnail_url'];
+				$videos[$id]['duration'] = $m_value['duration'];
+
+				// 日付の形式を変更する
+				$videos[$id]['create_time'] = date('Y年n月j日', strtotime($m_value['create_time']));
+			}
+
+			// 指定カテゴリーが含まれていなければ加える(指定カテゴリーが非表示フラグの動画)
+			if (!$video['display_flag'])
+			{
+				// カテゴリーcsvからカテゴリー名を取得してセット
+				foreach ($category_csv as $c_key => $c_value)
+				{
+					if ($c_value['id'] == $category_id)
+					{
+						$videos[$id]['category'][$r_key+1]['id'] = $category_id;
+						$videos[$id]['category'][$r_key+1]['name'] = $c_value['name'];
+					}
+				}
+			}
+		}
+
+		return array_reverse($videos);
 	}
 
 	/**

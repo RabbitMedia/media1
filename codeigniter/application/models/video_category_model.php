@@ -44,9 +44,9 @@ class Video_category_model extends CI_Model
 	public function get_by_category($category)
 	{
 		// select
-		$this->db->select('master_id');
+		$this->db->select('master_id, display_flag');
 		// where
-		$this->db->where('category');
+		$this->db->where('category', $category);
 
 		// クエリの実行
 		$query = $this->db->get($this->table_name);

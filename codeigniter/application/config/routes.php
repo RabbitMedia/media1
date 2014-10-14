@@ -47,5 +47,9 @@ $route['video/(:num)'] = "video/index/$1";
 // トップページ
 $route['(:num)'] = "top/index/$1";
 
+// 各種カテゴリーページ
+$route['category/(:num)'] = "category/index/$1/";
+$route['category/(:num)/(:num)'] = "category/index/$1/$2";
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
