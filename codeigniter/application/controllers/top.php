@@ -15,11 +15,15 @@ class Top extends CI_Controller
 
 		// カテゴリーリスト
 		$category_csv = AppCsvLoader::load('category.csv');
+		$categories = array();
 		foreach ($category_csv as $key => $value)
 		{
-			$category['name'] = $value['name'];
-			$category['id'] = $value['id'];
-			$categories[] = $category;
+			if ($value['display_flag'])
+			{
+				$category['name'] = $value['name'];
+				$category['id'] = $value['id'];
+				$categories[] = $category;
+			}
 		}
 		$data['categories'] = $categories;
 
