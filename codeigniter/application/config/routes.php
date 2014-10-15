@@ -51,5 +51,10 @@ $route['(:num)'] = "top/index/$1";
 $route['category/(:num)'] = "category/index/$1/";
 $route['category/(:num)/(:num)'] = "category/index/$1/$2";
 
+// アバウトページ
+$route['about'] = "about/aboutus";
+$route['ad'] = "about/ad";
+$route['contact'] = "about/contact";
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

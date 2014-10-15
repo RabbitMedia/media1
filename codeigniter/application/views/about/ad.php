@@ -5,36 +5,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="copyright" content="&copy;セックル速報" />
-		<meta name="description" content="【動画あり】<?=$current_category_name?>のエロすぎる動画をまとめたったｗｗｗセックル速報にはこの他にも無料セックス動画が満載ｗｗｗ" />
-		<meta name="keywords" content="セックス動画,セックル速報,<?=$current_category_name?>" />
-		<meta property="og:title" content="エロすぎる<?=$current_category_name?>動画 <?=$total_count?>件 | セックル速報" />
-		<meta property="og:type" content="article" />
+		<meta name="description" content="セックル速報は、無料でセックス動画を楽しめるセックス動画まとめサイトです。" />
+		<meta name="keywords" content="セックス動画,セックル速報" />
+		<meta property="og:title" content="セックル速報 - 無料セックス動画まとめ" />
+		<meta property="og:type" content="website" />
 		<meta property="og:image" content="" />
-		<meta property="og:url" content="http://sekusoku.com/category/<?=$current_category_id?>" />
-		<meta property="og:description" content="【動画あり】<?=$current_category_name?>のエロすぎる動画をまとめたったｗｗｗセックル速報にはこの他にも無料セックス動画が満載ｗｗｗ" />
+		<meta property="og:url" content="http://sekusoku.com/about" />
+		<meta property="og:description" content="セックル速報は、無料でセックス動画を楽しめるセックス動画まとめサイトです。" />
 		<meta property="og:site_name" content="セックル速報 - 無料セックス動画まとめ" />
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="@sekusoku">
-		<?php if ($page <= 1): ?>
-			<link rel="canonical" href="http://sekusoku.com/category/<?=$current_category_id?>" />
-		<?php else: ?>
-			<link rel="canonical" href="http://sekusoku.com/category/<?=$current_category_id?>/<?=$page?>" />
-		<?php endif; ?>
-		<?php if ($page > 1): ?>
-			<?php if ($page == 2): ?>
-				<link rel="prev" href="http://sekusoku.com/category/<?=$current_category_id?>" />
-			<?php else: ?>
-				<link rel="prev" href="http://sekusoku.com/category/<?=$current_category_id?>/<?=$page-1?>" />
-			<?php endif; ?>
-		<?php endif; ?>
-		<?php if ($page_next_flag): ?>
-			<link rel="next" href="http://sekusoku.com/category/<?=$current_category_id?>/<?=$page+1?>" />
-		<?php endif; ?>
-		<?php if ($page <= 1): ?>
-			<title>エロすぎる<?=$current_category_name?>動画 <?=$total_count?>件 | セックル速報 - 無料セックス動画まとめ</title>
-		<?php else: ?>
-			<title>エロすぎる<?=$current_category_name?>動画 <?=$total_count?>件 (<?=$page?>ページ目) | セックル速報 - 無料セックス動画まとめ</title>
-		<?php endif; ?>
+		<link rel="canonical" href="http://sekusoku.com/about" />
+		<title>広告掲載について | セックル速報 - 無料セックス動画まとめ</title>
 		<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico" />
 		<link rel="icon" type="image/png" href="/image/favicon.png" />
 		<link rel="apple-touch-icon-precomposed" href="/image/apple-touch-icon-precomposed.png" />
@@ -67,46 +49,38 @@
 
 		<div class="container">
 
+			<div class="row hidden-xs">
+
+				<div class="col-xs-12">
+					<ol class="breadcrumb">
+						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title">ホーム</span></a></li>
+						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><span itemprop="title">広告掲載について</span></li>
+					</ol>
+				</div>
+
+			</div>
+
 			<div class="row">
 
 				<div class="col-xs-12">
-					<h1><?=$total_count?>件の無料セックス動画 (<?=$current_category_name?>)</h1>
+					<h1>広告掲載について</h1>
 				</div>
 
 			</div>
 
 			<div class="row">
 
-				<?php foreach ($videos as $id => $video): ?>
-					<div class="col-xs-12 col-sm-6 col-md-3">
-						<div class="thumbnail">
-							<a href="/video/<?=$video['master_id']?>"><img src="<?=$video['thumbnail_url']?>" alt="<?=$video['title']?>" class="img-rounded img-responsive"></a>
-							<div class="caption">
-								<h2><a href="/video/<?=$video['master_id']?>"><?=$video['title']?></a></h2>
-								<p>
-									<?php foreach ($video['category'] as $key => $category): ?>
-										<a href="/category/<?=$category['id']?>"><span class="label label-default"><?=$category['name']?></span></a>&nbsp;
-									<?php endforeach; ?>
-								</p>
-								<p><?=$video['create_time']?></p>
-							</div>
+				<div class="col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h2>セックル速報の広告販売について</h2>
+							<p>セックル速報では、広告の販売を行っております。</p>
+							<p>セックル速報への広告出稿にご興味のある方は、<<a href="/contact">お問い合わせ</a>> よりお気軽にご連絡くださいますようお願いいたします。</p>
+
+							<h2>セックル速報の広告掲載基準について</h2>
+							<p>セックル速報では、ワンクリック詐欺など、ユーザーの皆様に著しく悪影響を及ぼす広告や違法性のあるコンテンツの掲載はいたしておりませんので、ご了承くださいますようお願いいたします。</p>
 						</div>
 					</div>
-				<?php endforeach; ?>
-
-			</div>
-
-			<div class="row">
-
-				<div class="col-xs-12 hidden-xs text-center">
-					<ul class="pagination pagination-lg">
-						<?=$pagination?>
-					</ul>
-				</div>
-				<div class="col-xs-12 visible-xs text-center">
-					<ul class="pagination">
-						<?=$pagination?>
-					</ul>
 				</div>
 
 			</div>
@@ -186,34 +160,5 @@
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="/js/ie10-viewport-bug-workaround.js"></script>
-		<!-- EqualHeight.js -->
-		<script src="/js/jquery.equalheight.min.js"></script>
-		<!-- EqualHeight.js -->
-		<script>
-			$(function() {
-				var equalHeight = $('.caption h2').equalHeight({wait: true});
-				// Browser supports matchMedia
-				if (window.matchMedia) {
-					// MediaQueryList
-					var mql = window.matchMedia("(min-width: 500px)");
-					// MediaQueryListListener
-					var equalHeightCheck = function (mql) {
-						if (mql.matches) {
-							equalHeight.start();
-						} else {
-							equalHeight.stop();
-						}
-					};
-					// Add listener
-					mql.addListener(equalHeightCheck);
-					// Manually call listener
-					equalHeightCheck(mql);
-				}
-				// Browser doesn't support matchMedia
-				else {
-					equalHeight.start();
-				}
-			});
-		</script>
 	</body>
 </html>

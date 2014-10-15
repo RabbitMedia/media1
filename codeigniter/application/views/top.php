@@ -161,9 +161,9 @@
 							<div class="col-xs-12">
 								<ul class="nav nav-pills">
 									<li><a href="/">ホーム</a></li>
-									<li><a href="/">サイトポリシー</a></li>
-									<li><a href="/">広告掲載について</a></li>
-									<li><a href="/">お問い合わせ</a></li>
+									<li><a href="/about">セックル速報について</a></li>
+									<li><a href="/ad">広告掲載について</a></li>
+									<li><a href="/contact">お問い合わせ</a></li>
 								</ul>
 							</div>
 
