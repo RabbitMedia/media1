@@ -39,7 +39,8 @@
 */
 
 $route['default_controller'] = "top";
-$route['404_override'] = '';
+// 404ページカスタマイズ
+$route['404_override'] = 'error/error_404';
 
 // 動画ページ
 $route['video/(:num)'] = "video/index/$1";
