@@ -1,62 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Database Error</title>
-<style type="text/css">
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="copyright" content="&copy;セックル速報" />
+		<meta name="robots" content="NOINDEX,NOFOLLOW" />
+		<title>エラー | セックル速報 - 無料セックス動画まとめ</title>
+		<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico" />
+		<link rel="icon" type="image/png" href="/image/favicon.png" />
+		<link rel="apple-touch-icon-precomposed" href="/image/apple-touch-icon-precomposed.png" />
 
-::selection{ background-color: #E13300; color: white; }
-::moz-selection{ background-color: #E13300; color: white; }
-::webkit-selection{ background-color: #E13300; color: white; }
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<!-- Custom styles for Sticky footer with fixed navbar -->
+		<link rel="stylesheet" href="/css/sticky-footer-navbar.css">
 
-body {
-	background-color: #fff;
-	margin: 40px;
-	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
-}
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
 
-a {
-	color: #003399;
-	background-color: transparent;
-	font-weight: normal;
-}
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target=".openmodal"><span class="glyphicon glyphicon-th-list"></span></button>
+					<a class="navbar-brand" href="/">セックル速報</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<p class="navbar-text navbar-right">無料セックス動画を毎日更新！</p>
+				</div>
+			</div>
+		</nav>
 
-h1 {
-	color: #444;
-	background-color: transparent;
-	border-bottom: 1px solid #D0D0D0;
-	font-size: 19px;
-	font-weight: normal;
-	margin: 0 0 14px 0;
-	padding: 14px 15px 10px 15px;
-}
+		<div class="container">
 
-code {
-	font-family: Consolas, Monaco, Courier New, Courier, monospace;
-	font-size: 12px;
-	background-color: #f9f9f9;
-	border: 1px solid #D0D0D0;
-	color: #002166;
-	display: block;
-	margin: 14px 0 14px 0;
-	padding: 12px 10px 12px 10px;
-}
+			<div class="row hidden-xs">
 
-#container {
-	margin: 10px;
-	border: 1px solid #D0D0D0;
-	-webkit-box-shadow: 0 0 8px #D0D0D0;
-}
+				<div class="col-xs-12">
+					<ol class="breadcrumb">
+						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title">ホーム</span></a></li>
+						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><span itemprop="title">エラー</span></li>
+					</ol>
+				</div>
 
-p {
-	margin: 12px 15px 12px 15px;
-}
-</style>
-</head>
-<body>
-	<div id="container">
-		<h1><?php echo $heading; ?></h1>
-		<?php echo $message; ?>
-	</div>
-</body>
+			</div>
+
+			<div class="row">
+
+				<div class="col-xs-12 text-center">
+					<h1><?php echo $heading; ?></h1>
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-xs-12 text-center">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<p><?php echo $message; ?></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="footer">
+			<div class="container text-center">
+				<p class="text-muted">Copyright &copy; <?php echo date("Y"); ?> セックル速報 - 無料セックス動画まとめ All Rights Reserved.</p>
+			</div>
+		</div>
+
+		<div class="modal fade openmodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="container">
+							<div class="navbar-header">
+								<button type="button" class="btn btn-default navbar-btn navbar-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+							</div>
+						</div>
+					</nav>
+
+					<div class="container">
+
+						<div class="row">
+
+							<!-- <div class="col-xs-12">
+								<h3>キーワード検索</h3>
+								<div class="col-xs-12">
+									<form class="form-horizontal" role="form">
+										<div class="form-group">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="無料セックス動画の検索はこちらから">
+												<span class="input-group-btn">
+													<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												</span>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div> -->
+
+							<div class="col-xs-12">
+								<h3>カテゴリー検索</h3>
+								<div class="well">
+									<ul class="pager">
+										<?php foreach ($categories as $category): ?>
+											<li><a href="/category/<?=$category['id']?>"><?=$category['name']?></a></li>
+										<?php endforeach; ?>
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-xs-12">
+								<ul class="nav nav-pills">
+									<li><a href="/">ホーム</a></li>
+									<li><a href="/about">セックル速報について</a></li>
+									<li><a href="/ad">広告掲載について</a></li>
+									<li><a href="/contact">お問い合わせ</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="/js/ie10-viewport-bug-workaround.js"></script>
+	</body>
 </html>
