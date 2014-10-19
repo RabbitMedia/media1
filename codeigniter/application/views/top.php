@@ -53,7 +53,7 @@
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target=".openmodal"><span class="glyphicon glyphicon-th-list"></span></button>
-					<a class="navbar-brand" href="/">セックル速報</a>
+					<a class="navbar-brand" href="/"><img src="/images/logo.png" alt="セックル速報"></a>
 				</div>
 				<div class="collapse navbar-collapse">
 					<p class="navbar-text navbar-right">無料セックス動画を毎日更新！</p>
