@@ -9,7 +9,7 @@
 		<meta name="keywords" content="セックス動画,セックル速報,<?=$current_category_name?>" />
 		<meta property="og:title" content="エロすぎる<?=$current_category_name?>動画 <?=$total_count?>件 | セックル速報" />
 		<meta property="og:type" content="article" />
-		<meta property="og:image" content="" />
+		<meta property="og:image" content="http://sekusoku.com/images/apple-touch-icon.png" />
 		<meta property="og:url" content="http://sekusoku.com/category/<?=$current_category_id?>" />
 		<meta property="og:description" content="【動画あり】<?=$current_category_name?>のエロすぎる動画をまとめたったｗｗｗセックル速報にはこの他にも無料セックス動画が満載ｗｗｗ" />
 		<meta property="og:site_name" content="セックル速報 - 無料セックス動画まとめ" />

@@ -9,7 +9,7 @@
 		<meta name="keywords" content="セックス動画,セックル速報" />
 		<meta property="og:title" content="セックル速報 - 無料セックス動画まとめ" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="" />
+		<meta property="og:image" content="http://sekusoku.com/images/apple-touch-icon.png" />
 		<meta property="og:url" content="http://sekusoku.com/about" />
 		<meta property="og:description" content="セックル速報は、無料でセックス動画を楽しめるセックス動画まとめサイトです。" />
 		<meta property="og:site_name" content="セックル速報 - 無料セックス動画まとめ" />
