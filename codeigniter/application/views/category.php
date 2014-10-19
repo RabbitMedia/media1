@@ -35,9 +35,9 @@
 		<?php else: ?>
 			<title>エロすぎる<?=$current_category_name?>動画 <?=$total_count?>件 (<?=$page?>ページ目) | セックル速報 - 無料セックス動画まとめ</title>
 		<?php endif; ?>
-		<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico" />
-		<link rel="icon" type="image/png" href="/image/favicon.png" />
-		<link rel="apple-touch-icon-precomposed" href="/image/apple-touch-icon-precomposed.png" />
+		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+		<link rel="icon" type="image/png" href="/images/favicon.png" />
+		<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="/css/bootstrap.min.css">

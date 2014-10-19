@@ -17,9 +17,9 @@
 		<meta name="twitter:site" content="@sekusoku">
 		<link rel="canonical" href="http://sekusoku.com/about" />
 		<title>セックル速報について | セックル速報 - 無料セックス動画まとめ</title>
-		<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico" />
-		<link rel="icon" type="image/png" href="/image/favicon.png" />
-		<link rel="apple-touch-icon-precomposed" href="/image/apple-touch-icon-precomposed.png" />
+		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+		<link rel="icon" type="image/png" href="/images/favicon.png" />
+		<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="/css/bootstrap.min.css">
