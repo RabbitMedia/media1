@@ -23,6 +23,9 @@ class Crawler extends CI_Controller
 	 */
 	public function get_videos()
 	{
+		// 実行開始時刻をログに出力する
+		echo '開始: '.date("Y-m-d H:i:s")."\n";
+
 		// 配列
 		$contents = array();
 
@@ -32,5 +35,8 @@ class Crawler extends CI_Controller
 
 		// クローラーが集めてきた動画を登録する
 		$this->logiccrawler->set_crawled_videos($contents);
+
+		// 実行終了時刻をログに出力する
+		echo '終了: '.date("Y-m-d H:i:s")."\n";
 	}
 }
