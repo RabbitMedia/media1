@@ -1,9 +1,10 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
+RewriteBase /codeigniter/assets
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond $1 !^(index\.php|assets|robots\.txt)
 RewriteRule ^(.*)$ /index.php/$1 [L]
-RewriteCond %{HTTP_HOST} ^www\.sekusoku\.com
-RewriteRule ^(.*)$ http://sekusoku.com/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} ^www\.sekusoku\.com
+# RewriteRule ^(.*)$ http://sekusoku.com/$1 [R=301,L]
 </IfModule>
