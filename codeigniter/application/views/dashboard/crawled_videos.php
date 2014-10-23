@@ -189,6 +189,7 @@
 										</div>
 										<div class="form-group">
 											<input type="hidden" name="crawler_master_id" value="<?=$video['crawler_master_id']?>">
+											<input type="hidden" name="current_page" value="<?=$current_page?>">
 											<button type="submit" class="btn btn-lg btn-primary btn-block">削除する</button>
 										</div>
 									<?php echo form_close(); ?>

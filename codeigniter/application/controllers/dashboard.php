@@ -122,6 +122,10 @@ class Dashboard extends CI_Controller
 			return;
 		}
 
+		// ページ数が動画数より多ければ調整する
+		$page = ($page > $data['total_count']) ? $data['total_count'] : $page;
+		$data['current_page'] = $page;
+
 		// ページネーション
 		$config['base_url'] = '/dashboard/crawled_videos/';
 		$config['total_rows'] = $data['total_count'];
@@ -217,9 +221,10 @@ class Dashboard extends CI_Controller
 	{
 		// POSTデータ
 		$item['crawler_master_id'] = $this->input->post('crawler_master_id');
+		$item['current_page'] = $this->input->post('current_page');
 
 		// POSTデータチェック
-		if (empty($item['crawler_master_id']))
+		if (empty($item['crawler_master_id']) || empty($item['current_page']))
 		{
 			show_error('Invalid Post Data');
 		}
@@ -234,6 +239,6 @@ class Dashboard extends CI_Controller
 		}
 
 		// 管理画面アップ待ち動画へ戻る
-		redirect('dashboard/crawled_videos/');
+		redirect('dashboard/crawled_videos/'.$item['current_page']);
 	}
 }
