@@ -84,7 +84,7 @@
 				<?php foreach ($videos as $id => $video): ?>
 					<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="thumbnail">
-							<a href="/video/<?=$video['master_id']?>"><img src="<?=$video['thumbnail_url']?>" alt="<?=$video['title']?>" class="img-rounded img-responsive"></a>
+							<a href="/video/<?=$video['master_id']?>"><img src="<?=$video['thumbnail_url']?>" alt="<?=$video['title']?>" class="img-rounded img-responsive" width="240" height="180"></a>
 							<div class="caption">
 								<h2><a href="/video/<?=$video['master_id']?>"><?=$video['title']?></a></h2>
 								<p>
