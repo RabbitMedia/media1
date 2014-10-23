@@ -193,10 +193,12 @@ class Dashboard extends CI_Controller
 		$item['video_url_id'] = $this->input->post('video_url_id');
 		$item['main_category'] = $this->input->post('main_category');
 		$item['sub_category'] = $this->input->post('sub_category');
+		$item['current_page'] = $this->input->post('current_page');
 
 		// POSTデータチェック
 		if (empty($item['crawler_master_id']) || empty($item['title']) || empty($item['thumbnail']) || empty($item['duration'])
-			|| empty($item['type']) || empty($item['video_url_id']) || empty($item['main_category']) || empty($item['sub_category']))
+			|| empty($item['type']) || empty($item['video_url_id']) || empty($item['main_category']) || empty($item['sub_category'])
+			|| empty($item['current_page']))
 		{
 			show_error('Invalid Post Data');
 		}
@@ -211,7 +213,7 @@ class Dashboard extends CI_Controller
 		}
 
 		// 管理画面アップ待ち動画へ戻る
-		redirect('dashboard/crawled_videos/');
+		redirect('dashboard/crawled_videos/'.$item['current_page']);
 	}
 
 	/**

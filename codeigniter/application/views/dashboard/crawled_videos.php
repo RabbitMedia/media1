@@ -174,6 +174,7 @@
 									<div class="form-group">
 										<input type="hidden" name="crawler_master_id" value="<?=$video['crawler_master_id']?>">
 										<input type="hidden" name="duration" value="<?=$video['duration']?>">
+										<input type="hidden" name="current_page" value="<?=$current_page?>">
 										<?php foreach ($video['type'] as $key => $type): ?>
 											<input type="hidden" name="type[]" value="<?=$type?>">
 											<input type="hidden" name="video_url_id[]" value="<?=$video['video_url_id'][$key]?>">
