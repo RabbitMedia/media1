@@ -2,7 +2,7 @@
 
 class MY_Exceptions extends CI_Exceptions
 {
-	public function show_404()
+	public function show_404($page = '', $log_error = true)
 	{
 		$CI =& get_instance();
 
@@ -19,6 +19,11 @@ class MY_Exceptions extends CI_Exceptions
 			}
 		}
 		$data['categories'] = $categories;
+
+		if ($log_error)
+		{
+			log_message('error', '404 Page Not Found --> '.$page);
+		}
 
 		$CI->load->view('error/error_404', $data);
 		echo $CI->output->get_output();
