@@ -24,6 +24,7 @@ class Video_category_model extends CI_Model
 		// where
 		$this->db->where('master_id', $master_id);
 		$this->db->where('display_flag', self::DISPLAY_ON);
+		$this->db->where('delete_time', null);
 
 		// クエリの実行
 		$query = $this->db->get($this->table_name);
@@ -47,6 +48,7 @@ class Video_category_model extends CI_Model
 		$this->db->select('master_id, display_flag');
 		// where
 		$this->db->where('category', $category);
+		$this->db->where('delete_time', null);
 
 		// クエリの実行
 		$query = $this->db->get($this->table_name);

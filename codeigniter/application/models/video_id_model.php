@@ -20,6 +20,7 @@ class Video_id_model extends CI_Model
 		$this->db->select('type, video_url_id');
 		// where
 		$this->db->where('master_id', $master_id);
+		$this->db->where('delete_time', null);
 
 		// クエリの実行
 		$query = $this->db->get($this->table_name);
