@@ -5,7 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="copyright" content="&copy;セックル速報" />
-		<meta name="description" content="セックル速報は、無料でセックス動画を楽しめるセックス動画まとめサイトです。" />
+		<?php if ($page <= 1): ?>
+			<meta name="description" content="セックル速報は、無料でセックス動画を楽しめるセックス動画まとめサイトです。" />
+		<?php else: ?>
+			<meta name="description" content="セックル速報は、無料でセックス動画を楽しめるセックス動画まとめサイトです。（<?=$page?>ページ目）" />
+		<?php endif; ?>
 		<meta name="keywords" content="セックス動画,セックル速報" />
 		<meta property="og:title" content="セックル速報 - 無料セックス動画まとめ" />
 		<meta property="og:type" content="website" />
@@ -30,7 +34,11 @@
 		<?php if ($page_next_flag): ?>
 			<link rel="next" href="http://sekusoku.com/<?=$page+1?>" />
 		<?php endif; ?>
-		<title>セックル速報 - 無料セックス動画まとめ</title>
+		<?php if ($page <= 1): ?>
+			<title>セックル速報 - 無料セックス動画まとめ</title>
+		<?php else: ?>
+			<title>セックル速報 - 無料セックス動画まとめ（<?=$page?>ページ目）</title>
+		<?php endif; ?>
 		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
 		<link rel="icon" type="image/png" href="/images/favicon.png" />
 		<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
