@@ -5,7 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="copyright" content="&copy;セックル速報" />
-		<meta name="description" content="【動画あり】<?=$current_category_name?>のエロすぎる動画をまとめたったｗｗｗセックル速報にはこの他にも無料セックス動画が満載ｗｗｗ" />
+		<?php if ($page <= 1): ?>
+			<meta name="description" content="【動画あり】<?=$current_category_name?>のエロすぎる動画をまとめたったｗｗｗセックル速報にはこの他にも無料セックス動画が満載ｗｗｗ" />
+		<?php else: ?>
+			<meta name="description" content="【動画あり】<?=$current_category_name?>のエロすぎる動画をまとめたったｗｗｗセックル速報にはこの他にも無料セックス動画が満載ｗｗｗ (<?=$page?>ページ目)" />
+		<?php endif; ?>
 		<meta name="keywords" content="セックス動画,セックル速報,<?=$current_category_name?>" />
 		<meta property="og:title" content="エロすぎる<?=$current_category_name?>動画 <?=$total_count?>件 | セックル速報" />
 		<meta property="og:type" content="article" />

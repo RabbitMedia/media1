@@ -8,7 +8,7 @@
 		<?php if ($page <= 1): ?>
 			<meta name="description" content="セックル速報は、無料でセックス動画を楽しめるセックス動画まとめサイトです。" />
 		<?php else: ?>
-			<meta name="description" content="セックル速報は、無料でセックス動画を楽しめるセックス動画まとめサイトです。（<?=$page?>ページ目）" />
+			<meta name="description" content="セックル速報は、無料でセックス動画を楽しめるセックス動画まとめサイトです。 (<?=$page?>ページ目)" />
 		<?php endif; ?>
 		<meta name="keywords" content="セックス動画,セックル速報" />
 		<meta property="og:title" content="セックル速報 - 無料セックス動画まとめ" />
@@ -37,7 +37,7 @@
 		<?php if ($page <= 1): ?>
 			<title>セックル速報 - 無料セックス動画まとめ</title>
 		<?php else: ?>
-			<title>セックル速報 - 無料セックス動画まとめ（<?=$page?>ページ目）</title>
+			<title>セックル速報 - 無料セックス動画まとめ (<?=$page?>ページ目)</title>
 		<?php endif; ?>
 		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
 		<link rel="icon" type="image/png" href="/images/favicon.png" />
