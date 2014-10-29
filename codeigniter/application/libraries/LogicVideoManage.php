@@ -211,7 +211,7 @@ class LogicVideoManage
 		$this->CI->db->trans_begin();
 
 		// video_masterに登録するサムネイルのサイズを決定する
-		$thumbnail_url = ($item['thumbnail_size']) ? str_replace('thumbs', 'thumbsl', $item['thumbnail']) : $item['thumbnail'];
+		$thumbnail_url = ($item['thumbnail_size'] == 1) ? str_replace('thumbs', 'thumbsl', $item['thumbnail']) : $item['thumbnail'];
 
 		// video_masterに登録する
 		$data = array(
