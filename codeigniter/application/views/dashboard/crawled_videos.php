@@ -93,8 +93,8 @@
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<h2>サムネイル選択</h2>
-								<label><h3>Lサイズ <input type="radio" name="thumbnail_size" value="1" required="true"></span></h3></label>
-								<label><h3>Mサイズ <input type="radio" name="thumbnail_size" value="0" required="true"></span></h3></label>
+								<p><label><span class="label label-primary">Lサイズ <input type="radio" name="thumbnail_size" value="1" required="true"></span></h3></label>
+								<label><span class="label label-primary">Mサイズ <input type="radio" name="thumbnail_size" value="0" required="true"></span></h3></label></p>
 								<?php if ($video['thumbnail']): ?>
 									<?php foreach ($video['thumbnail'] as $thumbnail): ?>
 										<?php if ($thumbnail): ?>
