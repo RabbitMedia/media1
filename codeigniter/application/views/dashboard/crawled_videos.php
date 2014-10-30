@@ -101,7 +101,7 @@
 									<?php foreach ($video['thumbnail'] as $thumbnail): ?>
 										<?php if ($thumbnail): ?>
 											<?php foreach ($thumbnail as $value): ?>
-												<label><img src="<?=$value?>" class="img-thumbnail" width="88" height="66"><input type="radio" name="thumbnail" value="<?=$value?>" required="true"></label>
+												<label><img src="<?=$value?>" class="img-thumbnail" width="128" height="96"><input type="radio" name="thumbnail" value="<?=$value?>" required="true"></label>
 											<?php endforeach; ?>
 										<?php else: ?>
 											<h2 class="text-danger">サムネイルの取得に失敗しました</h2>
