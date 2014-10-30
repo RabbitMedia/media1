@@ -10,6 +10,9 @@ class Error extends CI_Controller
 	{
 		$data = array();
 
+		// HTTPステータスコードをセットする
+		$this->output->set_status_header('404');
+
 		// カテゴリーリスト
 		$category_csv = AppCsvLoader::load('category.csv');
 		$categories = array();
