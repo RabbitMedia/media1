@@ -89,12 +89,14 @@
 						</div>
 					</div>
 
-					<div class="col-xs-12 col-sm-12 col-md-6">
+				</div>
+
+				<div class="row">
+
+					<div class="col-xs-12 col-sm-12 col-md-12">
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<h2>サムネイル選択</h2>
-								<p><label><span class="label label-primary">Lサイズ <input type="radio" name="thumbnail_size" value="1" required="true"></span></h3></label>
-								<label><span class="label label-primary">Mサイズ <input type="radio" name="thumbnail_size" value="2" required="true"></span></h3></label></p>
 								<?php if ($video['thumbnail']): ?>
 									<?php foreach ($video['thumbnail'] as $thumbnail): ?>
 										<?php if ($thumbnail): ?>

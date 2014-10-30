@@ -187,7 +187,6 @@ class Dashboard extends CI_Controller
 		// POSTデータ
 		$item['crawler_master_id'] = $this->input->post('crawler_master_id');
 		$item['title'] = $this->input->post('title');
-		$item['thumbnail_size'] = $this->input->post('thumbnail_size');
 		$item['thumbnail'] = $this->input->post('thumbnail');
 		$item['duration'] = $this->input->post('duration');
 		$item['type'] = $this->input->post('type');
@@ -197,8 +196,8 @@ class Dashboard extends CI_Controller
 		$item['current_page'] = $this->input->post('current_page');
 
 		// POSTデータチェック
-		if (empty($item['crawler_master_id']) || empty($item['title']) || empty($item['thumbnail_size']) || empty($item['thumbnail'])
-			|| empty($item['duration']) || empty($item['type']) || empty($item['video_url_id']) || empty($item['main_category'])
+		if (empty($item['crawler_master_id']) || empty($item['title']) || empty($item['thumbnail']) || empty($item['duration'])
+			|| empty($item['type']) || empty($item['video_url_id']) || empty($item['main_category'])
 			|| empty($item['sub_category']) || empty($item['current_page']))
 		{
 			show_error('Invalid Post Data');
