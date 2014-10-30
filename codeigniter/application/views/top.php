@@ -19,11 +19,7 @@
 		<meta property="og:site_name" content="セックル速報 - 無料セックス動画まとめ" />
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="@sekusoku">
-		<?php if ($page <= 1): ?>
-			<link rel="canonical" href="http://sekusoku.com/" />
-		<?php else: ?>
-			<link rel="canonical" href="http://sekusoku.com/<?=$page?>" />
-		<?php endif; ?>
+		<link rel="canonical" href="http://sekusoku.com/" />
 		<?php if ($page > 1): ?>
 			<?php if ($page == 2): ?>
 				<link rel="prev" href="http://sekusoku.com/" />
