@@ -84,7 +84,7 @@
 				<?php foreach ($videos as $id => $video): ?>
 					<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="thumbnail">
-							<a href="/video/<?=$video['master_id']?>"><img data-original="<?=$video['thumbnail_url']?>" alt="<?=$video['title']?>" class="img-rounded img-responsive lazy" width="240" height="180"></a>
+							<a href="/video/<?=$video['master_id']?>"><img src="<?=$video['thumbnail_url']?>" alt="<?=$video['title']?>" class="img-rounded img-responsive" width="240" height="180"></a>
 							<div class="caption">
 								<h2><a href="/video/<?=$video['master_id']?>"><?=$video['title']?></a></h2>
 								<p>
@@ -192,8 +192,6 @@
 		<script src="/js/ie10-viewport-bug-workaround.js"></script>
 		<!-- EqualHeight.js -->
 		<script src="/js/jquery.equalheight.min.js"></script>
-		<!-- LazyLoad.js -->
-		<script src="/js/jquery.lazyload.min.js"></script>
 		<!-- EqualHeight.js -->
 		<script>
 			$(function() {
@@ -242,14 +240,6 @@
 				else {
 					equalHeight.start();
 				}
-			});
-		</script>
-		<!-- LazyLoad.js -->
-		<script>
-			$(function() {
-				$("img.lazy").lazyload({
-					effect:"fadeIn"
-				});
 			});
 		</script>
 	</body>
