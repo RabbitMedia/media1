@@ -1,6 +1,4 @@
-/*global jQuery */
-/*jshint multistr:true browser:true */
-/*!
+/*
 * FitVids 1.0
 *
 * Copyright 2011, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
@@ -9,72 +7,4 @@
 *
 * Date: Thu Sept 01 18:00:00 2011 -0500
 */
-
-(function( $ ){
-
-  "use strict";
-
-  $.fn.fitVids = function( options ) {
-    var settings = {
-      customSelector: null
-    };
-
-    var div = document.createElement('div'),
-        ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
-
-    div.className = 'fit-vids-style';
-    div.innerHTML = '&shy;<style>         \
-      .fluid-width-video-wrapper {        \
-         width: 100%;                     \
-         position: relative;              \
-         padding: 0;                      \
-      }                                   \
-                                          \
-      .fluid-width-video-wrapper iframe,  \
-      .fluid-width-video-wrapper object,  \
-      .fluid-width-video-wrapper embed {  \
-         position: absolute;              \
-         top: 0;                          \
-         left: 0;                         \
-         width: 100%;                     \
-         height: 100%;                    \
-      }                                   \
-    </style>';
-
-    ref.parentNode.insertBefore(div,ref);
-
-    if ( options ) {
-      $.extend( settings, options );
-    }
-
-    return this.each(function(){
-      var selectors = [
-        "iframe[src*='player.vimeo.com']",
-        "iframe[src*='www.youtube.com']",
-        "iframe[src*='www.kickstarter.com']",
-        "object",
-        "embed"
-      ];
-
-      if (settings.customSelector) {
-        selectors.push(settings.customSelector);
-      }
-
-      var $allVideos = $(this).find(selectors.join(','));
-
-      $allVideos.each(function(){
-        var $this = $(this);
-        if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
-        var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
-            width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
-            aspectRatio = height / width;
-        if(!$this.attr('id')){
-          var videoID = 'fitvid' + Math.floor(Math.random()*999999);
-          $this.attr('id', videoID);
-        }
-        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
-        $this.removeAttr('height').removeAttr('width');
-      });
-    });
-  };
-})( jQuery );
+(function(a){a.fn.fitVids=function(e){var b={customSelector:null};var c=document.createElement("div"),d=document.getElementsByTagName("base")[0]||document.getElementsByTagName("script")[0];c.className="fit-vids-style";c.innerHTML="­<style> .fluid-width-video-wrapper {width:100%;position:relative;padding:0;} .fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style>";d.parentNode.insertBefore(c,d);if(e){a.extend(b,e)}return this.each(function(){var g=["iframe[src*='player.vimeo.com']","iframe[src*='www.youtube.com']","iframe[src*='www.kickstarter.com']","object","embed"];if(b.customSelector){g.push(b.customSelector)}var f=a(this).find(g.join(","));f.each(function(){var h=a(this);if(this.tagName.toLowerCase()==="embed"&&h.parent("object").length||h.parent(".fluid-width-video-wrapper").length){return}var l=(this.tagName.toLowerCase()==="object"||(h.attr("height")&&!isNaN(parseInt(h.attr("height"),10))))?parseInt(h.attr("height"),10):h.height(),j=!isNaN(parseInt(h.attr("width"),10))?parseInt(h.attr("width"),10):h.width(),i=l/j;if(!h.attr("id")){var k="fitvid"+Math.floor(Math.random()*999999);h.attr("id",k)}h.wrap('<div class="fluid-width-video-wrapper"></div>').parent(".fluid-width-video-wrapper").css("padding-top",(i*100)+"%");h.removeAttr("height").removeAttr("width")})})}})(jQuery);
