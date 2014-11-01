@@ -217,6 +217,29 @@
 				else {
 					equalHeight.start();
 				}
+
+				var equalHeight = $('.caption p').equalHeight({wait: true});
+				// Browser supports matchMedia
+				if (window.matchMedia) {
+					// MediaQueryList
+					var mql = window.matchMedia("(min-width: 500px)");
+					// MediaQueryListListener
+					var equalHeightCheck = function (mql) {
+						if (mql.matches) {
+							equalHeight.start();
+						} else {
+							equalHeight.stop();
+						}
+					};
+					// Add listener
+					mql.addListener(equalHeightCheck);
+					// Manually call listener
+					equalHeightCheck(mql);
+				}
+				// Browser doesn't support matchMedia
+				else {
+					equalHeight.start();
+				}
 			});
 		</script>
 	</body>
