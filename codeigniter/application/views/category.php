@@ -75,6 +75,17 @@
 
 		<div class="container">
 
+			<div class="row hidden-xs">
+
+				<div class="col-xs-12">
+					<ol class="breadcrumb">
+						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title">ホーム</span></a></li>
+						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><span itemprop="title"><?=$current_category_name?></span></li>
+					</ol>
+				</div>
+
+			</div>
+
 			<div class="row">
 
 				<div class="col-xs-12">
