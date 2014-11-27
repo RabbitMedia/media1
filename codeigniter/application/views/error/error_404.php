@@ -43,7 +43,7 @@
 
 		<div class="container">
 
-			<div class="row hidden-xs">
+			<div class="row">
 
 				<div class="col-xs-12">
 					<ol class="breadcrumb">
